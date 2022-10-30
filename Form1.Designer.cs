@@ -139,11 +139,6 @@ namespace Rabota
             this.Name = "Form1";
             this.Text = "Вход";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Avto.ResumeLayout(false);
-            this.RegPage.ResumeLayout(false);
-            this.RegPage.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
