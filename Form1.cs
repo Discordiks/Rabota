@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Rabota.Entity;
+using System.Threading; //использование потоков
 
 namespace Rabota
 {
@@ -17,37 +18,14 @@ namespace Rabota
 
         ApplicationContext db = new ApplicationContext();
         Form2 f2;
+        //Form3 f3;
+        Thread th;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Reg_Click(object sender, EventArgs e)
-        {
-            //User user_e = db.Users.FirstOrDefault(u => u.email == RegEmail.Text);
-            //if (user_e != null)
-            //{
-            //    MessageBox.Show("Pochta yzhe est");
-            //    return;
-            //}
-            //User user = new User();
-            //user.email = RegEmail.Text;
-            //user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //fishiruem parol
-            //user.reg_date = DateTime.Now;
-            //user.age = 18;
-           
-
-            //db.Users.Add(user);
-            //db.SaveChanges();
-            //MessageBox.Show("Registracia uspeshna");
-        }
-
-        private void logi_Click(object sender, EventArgs e) //snachala ichem polzovatela, chtob potom nayti cash
+        private void logi_Click(object sender, EventArgs e) //ищем пользователя, чтобы найти кэш
         {
             User user = db.Users.FirstOrDefault(u => u.email == outemail.Text);
             if (user == null)
@@ -58,15 +36,32 @@ namespace Rabota
             if (BCrypt.Net.BCrypt.Verify(outpass.Text, user.password))
             {
                 MessageBox.Show("Всё верно, проходите");
+
+                this.Close();
+                th = new Thread(open);
+                th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                th.Start();
+
+
+                //f3 = new Form3();
+                //f3.Show();
                 return;
             }
             MessageBox.Show("Пароль введён неправильно");
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void sozdatakk_Click(object sender, EventArgs e)
         {
             f2 = new Form2();
             f2.Show();
         }
+        private void open(object obj)
+        {
+            Application.Run(new Form3());
+        }
+        
     }
 }
+
+

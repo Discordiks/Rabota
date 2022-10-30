@@ -13,8 +13,7 @@ namespace Rabota
 {
     public class ApplicationContext : DbContext
     {
-        //pocledovanie classov
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; } //последование классов
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,12 +23,11 @@ namespace Rabota
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasKey(p => p.id);
-            modelBuilder.Entity<User>().HasIndex(p => p.email).IsUnique();
-            //proverka pocht na kopii
-            base.OnModelCreating(modelBuilder);
-            
+            modelBuilder.Entity<User>().HasIndex(p => p.email).IsUnique(); //эта почта будет уникальной
+            base.OnModelCreating(modelBuilder); //проверка почты на копии
+
         }
-        public ApplicationContext()
+        public ApplicationContext() //просмотр классов
         {
             this.Database.EnsureCreated();
         }

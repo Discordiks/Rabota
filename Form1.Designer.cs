@@ -34,7 +34,7 @@ namespace Rabota
             this.outpass = new System.Windows.Forms.TextBox();
             this.outemail = new System.Windows.Forms.TextBox();
             this.logi = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sozdatakk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@ namespace Rabota
             this.outpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.outpass.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outpass.Location = new System.Drawing.Point(606, 463);
-            this.outpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.outpass.Margin = new System.Windows.Forms.Padding(4);
             this.outpass.Name = "outpass";
             this.outpass.PasswordChar = '*';
             this.outpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -78,7 +78,7 @@ namespace Rabota
             this.outemail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.outemail.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outemail.Location = new System.Drawing.Point(605, 363);
-            this.outemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.outemail.Margin = new System.Windows.Forms.Padding(4);
             this.outemail.Name = "outemail";
             this.outemail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.outemail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -91,7 +91,7 @@ namespace Rabota
             this.logi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logi.Location = new System.Drawing.Point(439, 551);
-            this.logi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logi.Margin = new System.Windows.Forms.Padding(4);
             this.logi.Name = "logi";
             this.logi.Size = new System.Drawing.Size(235, 33);
             this.logi.TabIndex = 0;
@@ -99,18 +99,18 @@ namespace Rabota
             this.logi.UseVisualStyleBackColor = false;
             this.logi.Click += new System.EventHandler(this.logi_Click);
             // 
-            // button1
+            // sozdatakk
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(786, 551);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Создать аккаунт";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.sozdatakk.BackColor = System.Drawing.Color.Lime;
+            this.sozdatakk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sozdatakk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sozdatakk.Location = new System.Drawing.Point(786, 551);
+            this.sozdatakk.Name = "sozdatakk";
+            this.sozdatakk.Size = new System.Drawing.Size(235, 33);
+            this.sozdatakk.TabIndex = 5;
+            this.sozdatakk.Text = "Создать аккаунт";
+            this.sozdatakk.UseVisualStyleBackColor = false;
+            this.sozdatakk.Click += new System.EventHandler(this.sozdatakk_Click);
             // 
             // label1
             // 
@@ -129,21 +129,15 @@ namespace Rabota
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.sozdatakk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.outpass);
             this.Controls.Add(this.logi);
             this.Controls.Add(this.outemail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Вход";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Avto.ResumeLayout(false);
-            this.RegPage.ResumeLayout(false);
-            this.RegPage.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +149,7 @@ namespace Rabota
         private System.Windows.Forms.TextBox outpass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sozdatakk;
         private System.Windows.Forms.Label label1;
     }
 }

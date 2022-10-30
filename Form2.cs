@@ -29,10 +29,10 @@ namespace Rabota
                 return;
             }
             User user = new User();
+            
             user.email = RegEmail.Text;
-            user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //fishiruem parol
+            user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
             user.reg_date = DateTime.Now;
-            //user.age = 18;
             user.fam = Regfam.Text;
             user.ima = Regima.Text;
             user.otch = Regotch.Text;
