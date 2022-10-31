@@ -17,7 +17,7 @@ namespace Rabota
         {
             InitializeComponent();
         }
-        
+
         private void matem_Click(object sender, EventArgs e)
         {
 

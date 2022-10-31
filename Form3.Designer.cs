@@ -33,7 +33,10 @@ namespace Rabota
             this.rus_z = new System.Windows.Forms.Button();
             this.liter = new System.Windows.Forms.Button();
             this.genshin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.fio = new System.Windows.Forms.Label();
+            this.Pochta = new System.Windows.Forms.Button();
+            this.redprof = new System.Windows.Forms.Button();
+            this.procent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // matem
@@ -52,7 +55,7 @@ namespace Rabota
             // 
             this.rus_z.BackColor = System.Drawing.Color.Lime;
             this.rus_z.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rus_z.Location = new System.Drawing.Point(202, 245);
+            this.rus_z.Location = new System.Drawing.Point(202, 242);
             this.rus_z.Name = "rus_z";
             this.rus_z.Size = new System.Drawing.Size(270, 67);
             this.rus_z.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace Rabota
             // 
             this.liter.BackColor = System.Drawing.Color.Lime;
             this.liter.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liter.Location = new System.Drawing.Point(202, 352);
+            this.liter.Location = new System.Drawing.Point(202, 345);
             this.liter.Name = "liter";
             this.liter.Size = new System.Drawing.Size(270, 67);
             this.liter.TabIndex = 2;
@@ -74,22 +77,55 @@ namespace Rabota
             // 
             this.genshin.BackColor = System.Drawing.Color.Lime;
             this.genshin.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genshin.Location = new System.Drawing.Point(193, 453);
+            this.genshin.Location = new System.Drawing.Point(202, 447);
             this.genshin.Name = "genshin";
             this.genshin.Size = new System.Drawing.Size(270, 67);
             this.genshin.TabIndex = 3;
             this.genshin.Text = "Геншин";
             this.genshin.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // fio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1061, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 36);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.fio.AutoSize = true;
+            this.fio.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fio.Location = new System.Drawing.Point(994, 61);
+            this.fio.Name = "fio";
+            this.fio.Size = new System.Drawing.Size(89, 36);
+            this.fio.TabIndex = 4;
+            this.fio.Text = "label1";
+            // 
+            // Pochta
+            // 
+            this.Pochta.BackColor = System.Drawing.Color.Lime;
+            this.Pochta.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pochta.Location = new System.Drawing.Point(951, 163);
+            this.Pochta.Name = "Pochta";
+            this.Pochta.Size = new System.Drawing.Size(270, 67);
+            this.Pochta.TabIndex = 5;
+            this.Pochta.Text = "Почта";
+            this.Pochta.UseVisualStyleBackColor = false;
+            // 
+            // redprof
+            // 
+            this.redprof.BackColor = System.Drawing.Color.Lime;
+            this.redprof.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redprof.Location = new System.Drawing.Point(951, 259);
+            this.redprof.Name = "redprof";
+            this.redprof.Size = new System.Drawing.Size(270, 95);
+            this.redprof.TabIndex = 6;
+            this.redprof.Text = "Редактировать профиль";
+            this.redprof.UseVisualStyleBackColor = false;
+            // 
+            // procent
+            // 
+            this.procent.BackColor = System.Drawing.Color.Lime;
+            this.procent.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procent.Location = new System.Drawing.Point(951, 396);
+            this.procent.Name = "procent";
+            this.procent.Size = new System.Drawing.Size(270, 87);
+            this.procent.TabIndex = 7;
+            this.procent.Text = "Процент выполнения";
+            this.procent.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
@@ -97,7 +133,10 @@ namespace Rabota
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.procent);
+            this.Controls.Add(this.redprof);
+            this.Controls.Add(this.Pochta);
+            this.Controls.Add(this.fio);
             this.Controls.Add(this.genshin);
             this.Controls.Add(this.liter);
             this.Controls.Add(this.rus_z);
@@ -115,6 +154,9 @@ namespace Rabota
         private System.Windows.Forms.Button rus_z;
         private System.Windows.Forms.Button liter;
         private System.Windows.Forms.Button genshin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label fio;
+        private System.Windows.Forms.Button Pochta;
+        private System.Windows.Forms.Button redprof;
+        private System.Windows.Forms.Button procent;
     }
 }

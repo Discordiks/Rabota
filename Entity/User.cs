@@ -18,7 +18,7 @@ namespace Rabota.Entity
         public string fam { get; set; }
         public string ima { get; set; }
         public string otch { get; set; }
-        //public DateTime datahb { get; set; }
+        public DateTime datahb { get; set; }
 
     }
 }
