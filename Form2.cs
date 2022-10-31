@@ -37,7 +37,7 @@ namespace Rabota
             user.ima = Regima.Text;
             user.otch = Regotch.Text;
             //user.datahb = Convert.ToDateTime(Regdatahb.Text);
-            user.datahb = DateTime.Parse(Regdatahb.Text);
+            //user.datahb = DateTime.Parse(Regdatahb.Text);
 
             db.Users.Add(user);
             db.SaveChanges();
