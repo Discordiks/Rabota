@@ -29,7 +29,6 @@ namespace Rabota
                 return;
             }
             User user = new User();
-            
             user.email = RegEmail.Text;
             user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
             user.reg_date = Convert.ToDateTime(DateTime.Now);

@@ -13,36 +13,36 @@ using System.Threading; //использование потоков
 
 namespace Rabota
 {
-    public partial class Form3 : Form
+    public partial class Form4 : Form
     {
-        ApplicationContext db = new ApplicationContext();
-        Form4 f4;
+        Form3 f3;
         Thread th;
-        public Form3()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void matem_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            Question question = new Question();
-            question.name = "";
-            
+        }
 
-            db.Questions.Add(question);
-            db.SaveChanges();
-            MessageBox.Show("Jnrhsdftv ntcn gj vfntvfnbrt");
+        private void zakonchit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("vozvrawaem nazad");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
             th.Start();
-            //f4 = new Form4();
-            //f4.Show();
         }
         private void open(object obj)
         {
-            Application.Run(new Form4());
+            Application.Run(new Form3());
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
