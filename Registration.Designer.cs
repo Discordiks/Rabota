@@ -1,7 +1,7 @@
 ﻿
 namespace Rabota
 {
-    partial class Form2
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.

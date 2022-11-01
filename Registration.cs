@@ -12,10 +12,10 @@ using Rabota.Entity;
 
 namespace Rabota
 {
-    public partial class Form2 : Form
+    public partial class Registration : Form
     {
         ApplicationContext db = new ApplicationContext();
-        public Form2()
+        public Registration()
         {
             InitializeComponent();
         }

@@ -13,13 +13,13 @@ using System.Threading; //использование потоков
 
 namespace Rabota
 {
-    public partial class Form1 : Form
+    public partial class Log_in : Form
     {
 
         ApplicationContext db = new ApplicationContext();
-        Form2 f2;
+        Registration f2;
         Thread th;
-        public Form1()
+        public Log_in()
         {
             InitializeComponent();
         }
@@ -48,12 +48,12 @@ namespace Rabota
 
         private void sozdatakk_Click(object sender, EventArgs e)
         {
-            f2 = new Form2();
+            f2 = new Registration();
             f2.Show();
         }
         private void open(object obj)
         {
-            Application.Run(new Form3());
+            Application.Run(new Students_acc());
         }
         
     }

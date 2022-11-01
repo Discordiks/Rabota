@@ -14,7 +14,7 @@ namespace Rabota
     public class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; } //последование классов
-        public DbSet<Test> Tests { get; set; }
+        public DbSet<Entity.Test> Tests { get; set; }
         public DbSet<Type_question> Type_Questions { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
@@ -29,7 +29,7 @@ namespace Rabota
             modelBuilder.Entity<User>().HasKey(p => p.id);
             modelBuilder.Entity<User>().HasIndex(p => p.email).IsUnique();
 
-            modelBuilder.Entity<Test>().HasKey(p => p.id);
+            modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
             //эта почта будет уникальной
             base.OnModelCreating(modelBuilder); //проверка почты на копии
 

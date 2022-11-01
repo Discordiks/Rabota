@@ -1,7 +1,7 @@
 ﻿
 namespace Rabota
 {
-    partial class Form4
+    partial class Test_window
     {
         /// <summary>
         /// Required designer variable.
@@ -295,13 +295,13 @@ namespace Rabota
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 102);
+            this.label1.Location = new System.Drawing.Point(108, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 26);
             this.label1.TabIndex = 20;
             this.label1.Text = "label1";
             // 
-            // Form4
+            // Test_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,7 +328,7 @@ namespace Rabota
             this.Controls.Add(this.vopros2);
             this.Controls.Add(this.vopros1);
             this.Controls.Add(this.voprosl);
-            this.Name = "Form4";
+            this.Name = "Test_window";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();

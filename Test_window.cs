@@ -13,11 +13,11 @@ using System.Threading; //использование потоков
 
 namespace Rabota
 {
-    public partial class Form4 : Form
+    public partial class Test_window : Form
     {
-        Form3 f3;
+        //Students_acc f3;
         Thread th;
-        public Form4()
+        public Test_window()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace Rabota
         }
         private void open(object obj)
         {
-            Application.Run(new Form3());
+            Application.Run(new Students_acc());
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
