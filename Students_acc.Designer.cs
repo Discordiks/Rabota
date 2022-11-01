@@ -44,10 +44,10 @@ namespace Rabota
             this.matem.BackColor = System.Drawing.Color.Lime;
             this.matem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matem.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matem.Location = new System.Drawing.Point(152, 111);
-            this.matem.Margin = new System.Windows.Forms.Padding(2);
+            this.matem.Location = new System.Drawing.Point(203, 137);
+            this.matem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.matem.Name = "matem";
-            this.matem.Size = new System.Drawing.Size(202, 54);
+            this.matem.Size = new System.Drawing.Size(269, 66);
             this.matem.TabIndex = 0;
             this.matem.Text = "Математика";
             this.matem.UseVisualStyleBackColor = false;
@@ -58,10 +58,10 @@ namespace Rabota
             this.rus_z.BackColor = System.Drawing.Color.Lime;
             this.rus_z.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rus_z.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rus_z.Location = new System.Drawing.Point(152, 197);
-            this.rus_z.Margin = new System.Windows.Forms.Padding(2);
+            this.rus_z.Location = new System.Drawing.Point(203, 242);
+            this.rus_z.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rus_z.Name = "rus_z";
-            this.rus_z.Size = new System.Drawing.Size(202, 54);
+            this.rus_z.Size = new System.Drawing.Size(269, 66);
             this.rus_z.TabIndex = 1;
             this.rus_z.Text = "Русский язык";
             this.rus_z.UseVisualStyleBackColor = false;
@@ -72,10 +72,10 @@ namespace Rabota
             this.liter.BackColor = System.Drawing.Color.Lime;
             this.liter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.liter.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liter.Location = new System.Drawing.Point(152, 280);
-            this.liter.Margin = new System.Windows.Forms.Padding(2);
+            this.liter.Location = new System.Drawing.Point(203, 345);
+            this.liter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.liter.Name = "liter";
-            this.liter.Size = new System.Drawing.Size(202, 54);
+            this.liter.Size = new System.Drawing.Size(269, 66);
             this.liter.TabIndex = 2;
             this.liter.Text = "Литература";
             this.liter.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@ namespace Rabota
             this.genshin.BackColor = System.Drawing.Color.Lime;
             this.genshin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.genshin.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genshin.Location = new System.Drawing.Point(152, 363);
-            this.genshin.Margin = new System.Windows.Forms.Padding(2);
+            this.genshin.Location = new System.Drawing.Point(203, 447);
+            this.genshin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.genshin.Name = "genshin";
-            this.genshin.Size = new System.Drawing.Size(202, 54);
+            this.genshin.Size = new System.Drawing.Size(269, 66);
             this.genshin.TabIndex = 3;
             this.genshin.Text = "Геншин";
             this.genshin.UseVisualStyleBackColor = false;
@@ -99,10 +99,9 @@ namespace Rabota
             // 
             this.fio.AutoSize = true;
             this.fio.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fio.Location = new System.Drawing.Point(746, 50);
-            this.fio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fio.Location = new System.Drawing.Point(995, 62);
             this.fio.Name = "fio";
-            this.fio.Size = new System.Drawing.Size(71, 29);
+            this.fio.Size = new System.Drawing.Size(89, 36);
             this.fio.TabIndex = 4;
             this.fio.Text = "label1";
             // 
@@ -111,10 +110,10 @@ namespace Rabota
             this.Pochta.BackColor = System.Drawing.Color.Lime;
             this.Pochta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pochta.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pochta.Location = new System.Drawing.Point(713, 132);
-            this.Pochta.Margin = new System.Windows.Forms.Padding(2);
+            this.Pochta.Location = new System.Drawing.Point(951, 162);
+            this.Pochta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pochta.Name = "Pochta";
-            this.Pochta.Size = new System.Drawing.Size(202, 54);
+            this.Pochta.Size = new System.Drawing.Size(269, 66);
             this.Pochta.TabIndex = 5;
             this.Pochta.Text = "Почта";
             this.Pochta.UseVisualStyleBackColor = false;
@@ -124,12 +123,12 @@ namespace Rabota
             this.exit.BackColor = System.Drawing.Color.Lime;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(713, 289);
-            this.exit.Margin = new System.Windows.Forms.Padding(2);
+            this.exit.Location = new System.Drawing.Point(951, 356);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(202, 77);
+            this.exit.Size = new System.Drawing.Size(269, 95);
             this.exit.TabIndex = 6;
-            this.exit.Text = "VBIYTI";
+            this.exit.Text = "Выход";
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -138,20 +137,20 @@ namespace Rabota
             this.procent.BackColor = System.Drawing.Color.Lime;
             this.procent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.procent.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.procent.Location = new System.Drawing.Point(713, 197);
-            this.procent.Margin = new System.Windows.Forms.Padding(2);
+            this.procent.Location = new System.Drawing.Point(951, 242);
+            this.procent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.procent.Name = "procent";
-            this.procent.Size = new System.Drawing.Size(202, 71);
+            this.procent.Size = new System.Drawing.Size(269, 87);
             this.procent.TabIndex = 7;
             this.procent.Text = "Процент выполнения";
             this.procent.UseVisualStyleBackColor = false;
             // 
             // Students_acc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(963, 794);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.procent);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.Pochta);
@@ -160,7 +159,7 @@ namespace Rabota
             this.Controls.Add(this.liter);
             this.Controls.Add(this.rus_z);
             this.Controls.Add(this.matem);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Students_acc";
             this.Text = "Form3";
             this.ResumeLayout(false);

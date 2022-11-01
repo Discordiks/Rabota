@@ -33,13 +33,13 @@ namespace Rabota
         private void matem_Click(object sender, EventArgs e)
         {
 
-            Question question = new Question();
-            question.name = "";
-            
+            //Question question = new Question();
+            //question.name = "";
 
-            db.Questions.Add(question);
-            db.SaveChanges();
-            MessageBox.Show("Jnrhsdftv ntcn gj vfntvfnbrt");
+
+            //db.Questions.Add(question);
+            //db.SaveChanges();
+            MessageBox.Show("Открытие теста по математике");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -49,7 +49,7 @@ namespace Rabota
 
         private void rus_z_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Jnrhsdftv ntcn gj vfntvfnbrt");
+            MessageBox.Show("Открытие теста по русскому");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -58,7 +58,7 @@ namespace Rabota
 
         private void liter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Jnrhsdftv ntcn gj vfntvfnbrt");
+            MessageBox.Show("Открытие теста по литературе");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -67,7 +67,7 @@ namespace Rabota
 
         private void genshin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Jnrhsdftv ntcn gj vfntvfnbrt");
+            MessageBox.Show("Открытие ГЕНШИНАААА");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -76,7 +76,7 @@ namespace Rabota
 
         private void exit_Click(object sender, EventArgs e)
         {
-            DialogResult resulttt = MessageBox.Show("Yveren chto hochesh AAAAAAAAA", "exit", MessageBoxButtons.YesNo);
+            DialogResult resulttt = MessageBox.Show("Уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo);
             if (resulttt == DialogResult.Yes)
             {
                 
@@ -87,9 +87,9 @@ namespace Rabota
 
             }
                 
-            this.TopMost = true;
+            this.TopMost = true; //открытие формы "самой верхней формой"
 
-            
+
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Rabota
 
         private void zakonchit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("vozvrawaem nazad");
+            MessageBox.Show("Вернуться к тестам");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -41,6 +41,11 @@ namespace Rabota
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sledvopros_Click(object sender, EventArgs e)
         {
 
         }
