@@ -170,6 +170,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationContext.cs" />
+    <Compile Include="Entity\Answer.cs" />
+    <Compile Include="Entity\Question.cs" />
+    <Compile Include="Entity\Test.cs" />
+    <Compile Include="Entity\Type_question.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

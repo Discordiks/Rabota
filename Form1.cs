@@ -18,7 +18,6 @@ namespace Rabota
 
         ApplicationContext db = new ApplicationContext();
         Form2 f2;
-        //Form3 f3;
         Thread th;
         public Form1()
         {
@@ -41,10 +40,6 @@ namespace Rabota
                 th = new Thread(open);
                 th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
                 th.Start();
-
-
-                //f3 = new Form3();
-                //f3.Show();
                 return;
             }
             MessageBox.Show("Пароль введён неправильно");

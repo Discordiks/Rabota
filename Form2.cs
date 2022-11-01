@@ -32,7 +32,7 @@ namespace Rabota
             
             user.email = RegEmail.Text;
             user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
-            user.reg_date = DateTime.Now;
+            user.reg_date = Convert.ToDateTime(DateTime.Now);
             user.fam = Regfam.Text;
             user.ima = Regima.Text;
             user.otch = Regotch.Text;
