@@ -161,6 +161,7 @@ namespace Rabota
             this.Controls.Add(this.matem);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Students_acc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();

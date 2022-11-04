@@ -13,7 +13,8 @@ namespace Rabota
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<User> Users { get; set; } //последование классов
+        //перечисление таблиц
+        public DbSet<User> Users { get; set; } 
         public DbSet<Entity.Test> Tests { get; set; }
         public DbSet<Type_question> Type_Questions { get; set; }
         public DbSet<Question> Questions { get; set; }
@@ -21,11 +22,13 @@ namespace Rabota
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // конфигурация БД
             optionsBuilder.UseSqlite("Data Source=App.sqlite");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // конфигурация моделей
             modelBuilder.Entity<User>().HasKey(p => p.id);
             modelBuilder.Entity<User>().HasIndex(p => p.email).IsUnique();
 
@@ -36,8 +39,10 @@ namespace Rabota
         }
         public ApplicationContext() //просмотр классов
         {
-            this.Database.EnsureCreated();
+            //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
+            this.Database.EnsureCreated(); //Создание БД (создает если не находит файл бд, или он пустой)
         }
-            
+        
+       
     }
 }

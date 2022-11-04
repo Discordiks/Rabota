@@ -8,7 +8,9 @@ namespace Rabota.Entity
 {
     public class Type_question
     {
+
         public int id { get; set; }
         public string name { get; set; }
+       
     }
 }

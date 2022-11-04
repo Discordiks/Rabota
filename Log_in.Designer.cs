@@ -65,7 +65,7 @@ namespace Rabota
             this.outpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.outpass.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outpass.Location = new System.Drawing.Point(605, 463);
-            this.outpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.outpass.Margin = new System.Windows.Forms.Padding(4);
             this.outpass.Name = "outpass";
             this.outpass.PasswordChar = '*';
             this.outpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -78,7 +78,7 @@ namespace Rabota
             this.outemail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.outemail.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outemail.Location = new System.Drawing.Point(605, 363);
-            this.outemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.outemail.Margin = new System.Windows.Forms.Padding(4);
             this.outemail.Name = "outemail";
             this.outemail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.outemail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -91,7 +91,7 @@ namespace Rabota
             this.logi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logi.Location = new System.Drawing.Point(439, 551);
-            this.logi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logi.Margin = new System.Windows.Forms.Padding(4);
             this.logi.Name = "logi";
             this.logi.Size = new System.Drawing.Size(235, 33);
             this.logi.TabIndex = 0;
@@ -136,8 +136,9 @@ namespace Rabota
             this.Controls.Add(this.outpass);
             this.Controls.Add(this.logi);
             this.Controls.Add(this.outemail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Log_in";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
             this.ResumeLayout(false);
             this.PerformLayout();

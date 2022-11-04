@@ -193,7 +193,7 @@ namespace Rabota
             this.Regl.TabIndex = 18;
             this.Regl.Text = "Регистрация";
             // 
-            // Form2
+            // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +213,8 @@ namespace Rabota
             this.Controls.Add(this.RegEmail);
             this.Controls.Add(this.Reg);
             this.Controls.Add(this.RegPas);
-            this.Name = "Form2";
+            this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
