@@ -10,21 +10,33 @@ using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Rabota.Entity;
 using System.Threading; //использование потоков
+using System.Data.SQLite;
+using System.Reflection;
 
 namespace Rabota
 {
     public partial class Test_window : Form
     {
-        //Students_acc f3;
+        private SQLiteConnection connection;
         Thread th;
         public Test_window()
         {
             InitializeComponent();
+            //dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Table_refresh()
         {
-
+            this.connection.Open();
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Questions", this.connection);
+            DataSet data = new DataSet();
+            adapter.Fill(data);
+            dataGridView1.DataSource = data.Tables[0].DefaultView;
+            this.connection.Close();
+        }
+        private void Test_window_Load(object sender, EventArgs e)
+        {
+            connection = new SQLiteConnection("Data Source=App.sqlite");
+            this.Table_refresh();
         }
 
         private void zakonchit_Click(object sender, EventArgs e)
@@ -49,5 +61,7 @@ namespace Rabota
         {
 
         }
+
+        
     }
 }

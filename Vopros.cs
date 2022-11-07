@@ -16,15 +16,13 @@ using System.Reflection;
 
 namespace Rabota
 {
-    public partial class Form1 : Form
+    public partial class Vopros : Form
     {
-        ApplicationContext db = new ApplicationContext();
-        //private ApplicationContext applicationContext();
-       // private SQLiteConnection connection;
+        
+        
+        private SQLiteConnection connection;
         int ID1 = 0;
-        int ID2 = 0;
-        int ID3 = 0;
-        public Form1()
+        public Vopros()
         {
             InitializeComponent();
             dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
@@ -33,17 +31,14 @@ namespace Rabota
         private void Table_refresh()
         {
             this.connection.Open();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Question", this.connection);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Questions ORDER BY RAND() LIMIT 2; ", this.connection);
             DataSet data = new DataSet();
             adapter.Fill(data);
             dataGridView1.DataSource = data.Tables[0].DefaultView;
-           // bindingSource1.DataSource = data.Tables[0].DefaultView;
             this.connection.Close();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //optionsBuilder.UseSqlite("Data Source=App.sqlite");
-            //base.OnConfiguring(optionsBuilder);
             connection = new SQLiteConnection("Data Source=App.sqlite");
             this.Table_refresh();
         }
@@ -55,7 +50,7 @@ namespace Rabota
             //удалить - вопросы
             int s = Convert.ToInt32(kod1.Text);
             this.connection.Open();
-            SQLiteCommand _command = new SQLiteCommand("DELETE FROM Question WHERE id = " + s, connection);
+            SQLiteCommand _command = new SQLiteCommand("DELETE FROM Questions WHERE id = " + s, connection);
             int count_add = _command.ExecuteNonQuery();
             this.connection.Close();
             Table_refresh();
@@ -68,7 +63,7 @@ namespace Rabota
             string label1 = nameq.Text;
             string label2 = typeq.Text;
             string label3 = testq.Text;
-            string sql = "INSERT INTO Question(name, type_id, test_id) VALUES(@label1,@label2, @label3)";
+            string sql = "INSERT INTO Questions(name, type_id, test_id) VALUES(@label1,@label2, @label3)";
             SQLiteCommand _command = new SQLiteCommand(sql, connection);
             SQLiteParameter param1 = new SQLiteParameter("@label1", label1);
             SQLiteParameter param2 = new SQLiteParameter("@label2", label2);
@@ -105,7 +100,7 @@ namespace Rabota
             if (nameq.Text != "" && typeq.Text != "" && testq.Text != "")
             {
                 this.connection.Open();
-                SQLiteCommand command = new SQLiteCommand("UPDATE Question SET name = @nameq, type_id = @typeq, test_id = @testq WHERE id=@kodq", connection);
+                SQLiteCommand command = new SQLiteCommand("UPDATE Questions SET name = @nameq, type_id = @typeq, test_id = @testq WHERE id=@kodq", connection);
 
                 command.Parameters.AddWithValue("@kodq", ID1);
                 command.Parameters.AddWithValue("@nameq", nameq.Text);
