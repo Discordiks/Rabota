@@ -37,6 +37,7 @@ namespace Rabota
             base.OnModelCreating(modelBuilder); //проверка почты на копии
 
         }
+       
         public ApplicationContext() //просмотр классов
         {
             //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
