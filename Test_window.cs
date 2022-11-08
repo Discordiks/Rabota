@@ -17,7 +17,7 @@ namespace Rabota
 {
     public partial class Test_window : Form
     {
-        private SQLiteConnection connection;
+        ApplicationContext db = new ApplicationContext();
         Thread th;
         public Test_window()
         {
@@ -26,17 +26,12 @@ namespace Rabota
         }
         private void Table_refresh()
         {
-            this.connection.Open();
-            /*SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Questions", this.connection);
-            DataSet data = new DataSet();
-            adapter.Fill(data);
-            dataGridView1.DataSource = data.Tables[0].DefaultView;
-            this.connection.Close();
-            */
+
+            db.Questions.Include(t => t.Type_Question).Load();
+            dataGridView1.DataSource = db.Questions.Local.ToBindingList();
         }
         private void Test_window_Load(object sender, EventArgs e)
         {
-            //connection = new SQLiteConnection("Data Source=App.sqlite");
             this.Table_refresh();
         }
 

@@ -20,7 +20,6 @@ namespace Rabota
     {
 
         ApplicationContext db = new ApplicationContext();
-        //private SQLiteConnection connection;
         int ID1 = 0;
         public Vopros()
         {
@@ -30,20 +29,84 @@ namespace Rabota
         }
         private void Table_refresh()
         {
-           // db.Type_Questions.Load();
             db.Questions.Include(t=>t.Type_Question).Load();
             dataGridView1.DataSource = db.Questions.Local.ToBindingList();
-            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           // connection = new SQLiteConnection("Data Source=App.sqlite");
             Table_refresh();
-
         }
 
-      
+        //что происходит
+       /* public static void Mainu(string[] args)
+        {
+            // Добавление
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                User user1 = new User { fam = "Tomov", ima = "Tom", otch = "Tomovna" };
 
+                // Добавление
+                db.Users.Add(user1);
+                db.SaveChanges();
+            }
+
+            // получение
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                // получаем объекты из бд и выводим на консоль
+                var users = db.Users.ToList();
+                Console.WriteLine("Данные после добавления:");
+                foreach (User u in users)
+                {
+                    Console.WriteLine($"{u.id}.{u.fam} - {u.ima} - {u.otch}");
+                }
+            }
+
+            // Редактирование
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                // получаем первый объект
+                User user = db.Users.FirstOrDefault();
+                if (user != null)
+                {
+                    user.fam = "Bob";
+                    user.ima = "dxfhfgh";
+                    user.otch = "Bob";
+                    //обновляем объект
+                    //db.Users.Update(user);
+                    db.SaveChanges();
+                }
+                // выводим данные после обновления
+                Console.WriteLine("\nДанные после редактирования:");
+                var users = db.Users.ToList();
+                foreach (User u in users)
+                {
+                    Console.WriteLine($"{u.id}.{u.fam} - {u.ima} - {u.otch}");
+                }
+            }
+
+            // Удаление
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                // получаем первый объект
+                User user = db.Users.FirstOrDefault();
+                if (user != null)
+                {
+                    //удаляем объект
+                    db.Users.Remove(user);
+                    db.SaveChanges();
+                }
+                // выводим данные после обновления
+                Console.WriteLine("\nДанные после удаления:");
+                var users = db.Users.ToList();
+                foreach (User u in users)
+                {
+                    Console.WriteLine($"{u.id}.{u.fam} - {u.ima} - {u.otch}");
+                }
+            }
+            Console.Read();
+        }
+       */
         private void delete_Click(object sender, EventArgs e)
         {
             //удалить - вопросы

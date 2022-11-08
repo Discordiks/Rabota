@@ -41,12 +41,12 @@ namespace Rabota
             modelBuilder.Entity<Type_question>().HasData(
                 new Type_question { 
                     id = 1,
-                    name = "Один ответ"
+                    name = "Один вариант ответа"
                     },
                 new Type_question
                 {
                     id = 2,
-                    name = "Несколько ответов"
+                    name = "Несколько вариантов ответа"
                 },
                 new Type_question
                 {
@@ -59,7 +59,7 @@ namespace Rabota
                new Question
                {
                    id = 1,
-                   name = "Сколько весит ёж",
+                   name = "Сколько весит ёж?",
                    Type_questionid = 1,
                    test_id = 2,
                });
