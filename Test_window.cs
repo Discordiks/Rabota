@@ -27,15 +27,16 @@ namespace Rabota
         private void Table_refresh()
         {
             this.connection.Open();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Questions", this.connection);
+            /*SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM Questions", this.connection);
             DataSet data = new DataSet();
             adapter.Fill(data);
             dataGridView1.DataSource = data.Tables[0].DefaultView;
             this.connection.Close();
+            */
         }
         private void Test_window_Load(object sender, EventArgs e)
         {
-            connection = new SQLiteConnection("Data Source=App.sqlite");
+            //connection = new SQLiteConnection("Data Source=App.sqlite");
             this.Table_refresh();
         }
 

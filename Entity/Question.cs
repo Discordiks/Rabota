@@ -16,7 +16,17 @@ namespace Rabota.Entity
         [Column(TypeName = "varchar(255)")]
         public string name { get; set; }
 
-        public int type_id { get; set; }
+        public int Type_questionid { get; set; }
+        public virtual Type_question Type_Question  { get; set; }    // навигационное свойство
+
+        public virtual string Type_Question_name
+        {
+            get
+            {
+                return Type_Question.name;
+            }
+            
+        }
         public int test_id { get; set; }
 
     }

@@ -34,10 +34,47 @@ namespace Rabota
 
             modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
             //эта почта будет уникальной
-            base.OnModelCreating(modelBuilder); //проверка почты на копии
+
+
+
+
+            modelBuilder.Entity<Type_question>().HasData(
+                new Type_question { 
+                    id = 1,
+                    name = "Один ответ"
+                    },
+                new Type_question
+                {
+                    id = 2,
+                    name = "Несколько ответов"
+                },
+                new Type_question
+                {
+                    id = 3,
+                    name = "Самостоятельный ответ"
+                }
+                );
+
+            modelBuilder.Entity<Question>().HasData(
+               new Question
+               {
+                   id = 1,
+                   name = "Сколько весит ёж",
+                   Type_questionid = 1,
+                   test_id = 2,
+               });
+
+
+
+
+
+
+
+
+           base.OnModelCreating(modelBuilder); //проверка почты на копии
 
         }
-       
+      
         public ApplicationContext() //просмотр классов
         {
             //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)

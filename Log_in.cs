@@ -55,7 +55,11 @@ namespace Rabota
         {
             Application.Run(new Students_acc());
         }
-        
+
+        private void Log_in_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
