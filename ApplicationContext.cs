@@ -35,9 +35,6 @@ namespace Rabota
             modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
             //эта почта будет уникальной
 
-
-
-
             modelBuilder.Entity<Type_question>().HasData(
                 new Type_question { 
                     id = 1,
@@ -64,13 +61,6 @@ namespace Rabota
                    test_id = 2,
                });
 
-
-
-
-
-
-
-
            base.OnModelCreating(modelBuilder); //проверка почты на копии
 
         }
@@ -81,6 +71,5 @@ namespace Rabota
             this.Database.EnsureCreated(); //Создание БД (создает если не находит файл бд, или он пустой)
         }
         
-       
     }
 }
