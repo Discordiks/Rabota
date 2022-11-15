@@ -178,6 +178,12 @@
     <Compile Include="Entity\Test.cs" />
     <Compile Include="Entity\Type_question.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Teachers_acc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers_acc.Designer.cs">
+      <DependentUpon>Teachers_acc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vopros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Teachers_acc.resx">
+      <DependentUpon>Teachers_acc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vopros.resx">
       <DependentUpon>Vopros.cs</DependentUpon>
     </EmbeddedResource>

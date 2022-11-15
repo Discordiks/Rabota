@@ -27,7 +27,16 @@ namespace Rabota.Entity
             }
             
         }
-        public int test_id { get; set; }
+        public int Testid { get; set; }
+        public virtual Test Test { get; set; }    // навигационное свойство
 
+        public virtual string Test_result
+        {
+            get
+            {
+                return Test.result;
+            }
+
+        }
     }
 }

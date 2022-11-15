@@ -32,7 +32,7 @@ namespace Rabota
             modelBuilder.Entity<User>().HasKey(p => p.id);
             modelBuilder.Entity<User>().HasIndex(p => p.email).IsUnique();
 
-            modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
+            //modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
             //эта почта будет уникальной
 
             modelBuilder.Entity<Type_question>().HasData(
@@ -58,9 +58,37 @@ namespace Rabota
                    id = 1,
                    name = "Сколько весит ёж?",
                    Type_questionid = 1,
-                   test_id = 2,
+                   Testid = 2,
+               },
+               new Question
+               {
+                   id = 2,
+                   name = "Сколько раз Наруто позвал Саске?",
+                   Type_questionid = 3,
+                   Testid = 4,
                });
-
+            modelBuilder.Entity<Test>().HasData(
+               new Test
+               {
+                   id = 1,
+                   result = "Математика",
+               },
+               new Test
+               {
+                   id = 2,
+                   result = "Русский язык",
+               },
+               new Test
+               {
+                   id = 3,
+                   result = "Литература",
+               },
+               new Test
+               {
+                   id = 4,
+                   result = "Геншин",
+               });
+            
            base.OnModelCreating(modelBuilder); //проверка почты на копии
 
         }

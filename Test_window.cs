@@ -12,7 +12,6 @@ using Rabota.Entity;
 using System.Threading; //использование потоков
 using System.Data.SQLite;
 using System.Reflection;
-//using System.IO;
 using System.Runtime.Remoting.Channels;
 
 namespace Rabota
@@ -40,7 +39,8 @@ namespace Rabota
         private void Table_refresh()
         {
 
-            db.Questions.Include(t => t.Type_Question).Load();
+            db.Questions.Include(t1 => t1.Type_Question).Load();
+            db.Questions.Include(t2 => t2.Test).Load();
             dataGridView1.DataSource = db.Questions.Local.ToBindingList();
         }
         private void Test_window_Load(object sender, EventArgs e)
@@ -48,10 +48,10 @@ namespace Rabota
             sledvopros.Text = "Следующий вопрос";
             zakonchit.Text = "Выход";
 
-            radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
-            radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
-            radioButton3.CheckedChanged += new EventHandler(состаяниеперключение);
-            start();
+            //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
+            //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
+            //radioButton3.CheckedChanged += new EventHandler(состаяниеперключение);
+            //start();
             this.Table_refresh();
         }
 

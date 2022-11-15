@@ -34,13 +34,26 @@ namespace Rabota
             }
             if (BCrypt.Net.BCrypt.Verify(outpass.Text, user.password))
             {
-                MessageBox.Show("Всё верно, проходите");
+                if (outemail.Text ==  "t@mail.ru")
+                {
+                    MessageBox.Show("Всё верно, вы учитель, проходите");
 
-                this.Close();
-                th = new Thread(open);
-                th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
-                th.Start();
-                return;
+                    this.Close();
+                    th = new Thread(open_teacher_acc);
+                    th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                    th.Start();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Всё верно, вы школьник, проходите");
+
+                    this.Close();
+                    th = new Thread(open_student_acc);
+                    th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                    th.Start();
+                    return;
+                }
             }
             MessageBox.Show("Пароль введён неправильно");
             
@@ -51,9 +64,13 @@ namespace Rabota
             f2 = new Registration();
             f2.Show();
         }
-        private void open(object obj)
+        private void open_student_acc(object obj)
         {
             Application.Run(new Students_acc());
+        }
+        private void open_teacher_acc(object obj)
+        {
+            Application.Run(new Teachers_acc());
         }
 
         private void Log_in_Load(object sender, EventArgs e)

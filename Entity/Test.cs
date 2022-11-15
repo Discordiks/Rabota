@@ -11,6 +11,9 @@ namespace Rabota.Entity
     public class Test
     {
         public int id { get; set; }
+
+        [Required]
+        [Column(TypeName = "varchar(255)")]
         public string result { get; set; }
         
 
