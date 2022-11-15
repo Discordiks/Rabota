@@ -72,14 +72,15 @@ namespace Rabota
             Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
            
             // Добавление
-            db.Questions.Add(tom);
-            db.SaveChanges();
-
-            MessageBox.Show("Данные добавлены успешно");
-            Table_refresh();
+            //db.Questions.Add(tom);
+            //db.SaveChanges();
+            
+            //MessageBox.Show("Данные добавлены успешно");
+            //Table_refresh();
         }
         private void ClearData1()
         {
+            ;
             ID1 = 0;
             nameq.Text = "";
             typeq.Text = "";
