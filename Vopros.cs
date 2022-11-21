@@ -69,7 +69,7 @@ namespace Rabota
 
         private void create_Click(object sender, EventArgs e)
         {
-            Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
+            //Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
            
             // Добавление
             //db.Questions.Add(tom);
