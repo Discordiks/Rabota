@@ -36,7 +36,8 @@ namespace Rabota
             //эта почта будет уникальной
 
             modelBuilder.Entity<Type_question>().HasData(
-                new Type_question { 
+                new Type_question
+                { 
                     id = 1,
                     name = "Один вариант ответа"
                     },

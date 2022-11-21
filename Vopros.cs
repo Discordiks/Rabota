@@ -69,34 +69,33 @@ namespace Rabota
 
         private void create_Click(object sender, EventArgs e)
         {
-            //Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
-           
+            Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
+
             // Добавление
-            //db.Questions.Add(tom);
-            //db.SaveChanges();
-            
-            //MessageBox.Show("Данные добавлены успешно");
-            //Table_refresh();
+            db.Questions.Add(tom);
+            db.SaveChanges();
+            MessageBox.Show("Данные добавлены успешно");
+            Table_refresh();
         }
         private void ClearData1()
         {
             ;
             ID1 = 0;
             nameq.Text = "";
-            typeq.Text = "";
-            testq.Text = "";
+            //typeq.Text = "";
+            //testq.Text = "";
         }
         private void dataGridView1_RowHeaderMouseClick1(object sender, DataGridViewCellMouseEventArgs e)
         {
             ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             nameq.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            typeq.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            testq.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //typeq.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //testq.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
         private void change_Click(object sender, EventArgs e)
         {
             
-            if (nameq.Text != "" && typeq.Text != "" && testq.Text != "")
+            if (nameq.Text != "" )
             {
                 Table_refresh();
                 ClearData1();
