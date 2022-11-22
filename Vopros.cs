@@ -27,6 +27,8 @@ namespace Rabota
             InitializeComponent();
             dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
             
+
+
         }
         private void Table_refresh()
         {
@@ -64,40 +66,50 @@ namespace Rabota
             MessageBox.Show("Данные удалены успешно");
             var questions = db.Questions.ToList();
                 
-            Table_refresh();
+            //Table_refresh();
         }
 
         private void create_Click(object sender, EventArgs e)
         {
-            Question tom = new Question { name = nameq.Text, Type_questionid = combotypeq.SelectedIndex, Testid = combotestq.SelectedIndex};  
-
             // Добавление
+            Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Testid = Convert.ToInt32(combotestq.SelectedValue.ToString()) };  
+
             db.Questions.Add(tom);
             db.SaveChanges();
             MessageBox.Show("Данные добавлены успешно");
-            Table_refresh();
+            //Table_refresh();
+            ClearData1();
         }
         private void ClearData1()
         {
-            ;
+            
             ID1 = 0;
             nameq.Text = "";
-            //typeq.Text = "";
-            //testq.Text = "";
+            combotypeq.Text = "";
+            combotestq.Text = "";
         }
         private void dataGridView1_RowHeaderMouseClick1(object sender, DataGridViewCellMouseEventArgs e)
         {
             ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             nameq.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //typeq.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //testq.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            combotypeq.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            combotestq.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
         private void change_Click(object sender, EventArgs e)
         {
-            
+            //Изменение
+
             if (nameq.Text != "" )
             {
-                Table_refresh();
+
+                Question question = db.Questions.FirstOrDefault(q => q.id == ID1);
+                question.name = nameq.Text;
+                question.Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
+                question.Testid = Convert.ToInt32(combotestq.SelectedValue.ToString());
+
+                db.SaveChanges();
+                dataGridView1.Refresh();
+                MessageBox.Show("Данные обновлены успешно");
                 ClearData1();
 
             }
@@ -111,5 +123,6 @@ namespace Rabota
         {
 
         }
+       
     }
 }
