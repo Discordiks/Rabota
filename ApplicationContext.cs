@@ -57,17 +57,123 @@ namespace Rabota
                new Question
                {
                    id = 1,
-                   name = "Сколько весит ёж?",
+                   name = "С кем поцеловался Наруто?",
                    Type_questionid = 1,
                    Testid = 2,
                },
                new Question
                {
                    id = 2,
-                   name = "Сколько раз Наруто позвал Саске?",
-                   Type_questionid = 3,
+                   name = "Сколько персонажей в геншине?",
+                   Type_questionid = 1,
                    Testid = 4,
+               },
+               new Question
+               {
+                   id = 3,
+                   name = "Вы любите решать дифференциальные уравнения?",
+                   Type_questionid = 3,
+                   Testid = 1,
+               },
+               new Question
+               {
+                   id = 4,
+                   name = "Что пишется через дефис?",
+                   Type_questionid = 2,
+                   Testid = 2,
                });
+
+            modelBuilder.Entity<Answer>().HasData(
+               new Answer
+               {
+                   id = 1,
+                   name = "Саске",
+                   Questionid = 1,
+               },
+               new Answer
+               {
+                   id = 2,
+                   name = "Какаси",
+                   Questionid = 1,
+               },
+               new Answer
+               {
+                   id = 3,
+                   name = "Оротимару",
+                   Questionid = 1,
+               },
+               new Answer
+               {
+                   id = 4,
+                   name = "Сакура",
+                   Questionid = 1,
+               },
+                new Answer
+                {
+                    id = 5,
+                    name = "56",
+                    Questionid = 2,
+                },
+                new Answer
+                {
+                    id = 6,
+                    name = "40",
+                    Questionid = 2,
+                },
+                new Answer
+                {
+                    id = 7,
+                    name = "61",
+                    Questionid = 2,
+                },
+                new Answer
+                {
+                    id = 8,
+                    name = "52",
+                    Questionid = 2,
+                },
+                new Answer
+                {
+                    id = 9,
+                    name = "Да",
+                    Questionid = 3,
+                },
+                new Answer
+                {
+                    id = 10,
+                    name = "Конечно",
+                    Questionid = 3,
+                },
+                new Answer
+                {
+                    id = 11,
+                    name = "Ещё как",
+                    Questionid = 3,
+                },
+                new Answer
+                {
+                    id = 12,
+                    name = "Либо",
+                    Questionid = 4,
+                },
+                new Answer
+                {
+                    id = 13,
+                    name = "То",
+                    Questionid = 4,
+                },
+                new Answer
+                {
+                    id = 14,
+                    name = "Зачем",
+                    Questionid = 4,
+                },
+                new Answer
+                {
+                    id = 15,
+                    name = "Потому",
+                    Questionid = 4,
+                });
             modelBuilder.Entity<Test>().HasData(
                new Test
                {
@@ -82,7 +188,7 @@ namespace Rabota
                new Test
                {
                    id = 3,
-                   result = "Литература",
+                   result = "Наруто",
                },
                new Test
                {
@@ -96,7 +202,7 @@ namespace Rabota
       
         public ApplicationContext() //просмотр классов
         {
-            //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
+           // this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
             this.Database.EnsureCreated(); //Создание БД (создает если не находит файл бд, или он пустой)
         }
         

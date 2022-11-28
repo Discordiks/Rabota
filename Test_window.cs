@@ -41,7 +41,22 @@ namespace Rabota
 
             db.Questions.Include(t1 => t1.Type_Question).Load();
             db.Questions.Include(t2 => t2.Test).Load();
-            dataGridView1.DataSource = db.Questions.Local.ToBindingList();
+
+
+            Random rand = new Random();
+            int toSkip = rand.Next(0, db.Questions.Count());
+            db.Questions.Skip(toSkip).Take(1).First();
+
+            //Name  = db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
+
+            //try
+            //{
+            //    string result = com.ExecuteScalar().ToString();
+            //}
+            //catch (NullReferenceException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
         }
         private void Test_window_Load(object sender, EventArgs e)
         {
@@ -168,6 +183,9 @@ namespace Rabota
             if (sledvopros.Text == "Следующий вопрос") vopros();
         }
 
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

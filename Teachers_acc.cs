@@ -51,5 +51,10 @@ namespace Rabota
         {
             Application.Run(new Log_in());
         }
+
+        private void matem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

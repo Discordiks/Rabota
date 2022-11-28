@@ -26,15 +26,18 @@ namespace Rabota
         {
             InitializeComponent();
             dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
-            
-
-
+            //dataGridView2.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView2_RowHeaderMouseClick1);
         }
         private void Table_refresh()
         {
             db.Questions.Include(t1=>t1.Type_Question).Load();
             db.Questions.Include(t2=>t2.Test).Load();
             dataGridView1.DataSource = db.Questions.Local.ToBindingList();
+            dataGridView2.DataSource = db.Users.Local.ToBindingList();
+
+            
+
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -54,7 +57,6 @@ namespace Rabota
         {
             // Удаление
             int s = Convert.ToInt32(kod1.Text);
-            // получаем первый объект
             Question question = db.Questions.FirstOrDefault(q => q.id == s);
             if (question != null)
             {
@@ -65,19 +67,17 @@ namespace Rabota
             // выводим данные после обновления
             MessageBox.Show("Данные удалены успешно");
             var questions = db.Questions.ToList();
-                
-            //Table_refresh();
         }
+
 
         private void create_Click(object sender, EventArgs e)
         {
             // Добавление
-            Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Testid = Convert.ToInt32(combotestq.SelectedValue.ToString()) };  
+            Question tom = new Question {name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Testid = Convert.ToInt32(combotestq.SelectedValue.ToString()) };  
 
             db.Questions.Add(tom);
             db.SaveChanges();
             MessageBox.Show("Данные добавлены успешно");
-            //Table_refresh();
             ClearData1();
         }
         private void ClearData1()
@@ -119,10 +119,5 @@ namespace Rabota
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-       
     }
 }

@@ -246,6 +246,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Rabota.Entity.Question.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.Type_question.datasource" />
+    <None Include="Properties\DataSources\Rabota.Entity.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
