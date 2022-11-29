@@ -244,6 +244,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Rabota.Entity.Answer.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.Question.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.Type_question.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.User.datasource" />

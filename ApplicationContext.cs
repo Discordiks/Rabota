@@ -8,13 +8,12 @@ using Rabota.Entity;
 using System.Windows.Forms;
 
 
-
 namespace Rabota
 {
     public class ApplicationContext : DbContext
     {
         //перечисление таблиц
-        public DbSet<User> Users { get; set; } 
+        public DbSet<User> Users { get; set; }
         public DbSet<Entity.Test> Tests { get; set; }
         public DbSet<Type_question> Type_Questions { get; set; }
         public DbSet<Question> Questions { get; set; }
@@ -37,10 +36,10 @@ namespace Rabota
 
             modelBuilder.Entity<Type_question>().HasData(
                 new Type_question
-                { 
+                {
                     id = 1,
                     name = "Один вариант ответа"
-                    },
+                },
                 new Type_question
                 {
                     id = 2,
@@ -50,8 +49,7 @@ namespace Rabota
                 {
                     id = 3,
                     name = "Самостоятельный ответ"
-                }
-                );
+                });
 
             modelBuilder.Entity<Question>().HasData(
                new Question
@@ -108,72 +106,73 @@ namespace Rabota
                    name = "Сакура",
                    Questionid = 1,
                },
-                new Answer
-                {
-                    id = 5,
-                    name = "56",
-                    Questionid = 2,
-                },
-                new Answer
-                {
-                    id = 6,
-                    name = "40",
-                    Questionid = 2,
-                },
-                new Answer
-                {
-                    id = 7,
-                    name = "61",
-                    Questionid = 2,
-                },
-                new Answer
-                {
-                    id = 8,
-                    name = "52",
-                    Questionid = 2,
-                },
-                new Answer
-                {
-                    id = 9,
-                    name = "Да",
-                    Questionid = 3,
-                },
-                new Answer
-                {
-                    id = 10,
-                    name = "Конечно",
-                    Questionid = 3,
-                },
-                new Answer
-                {
-                    id = 11,
-                    name = "Ещё как",
-                    Questionid = 3,
-                },
-                new Answer
-                {
-                    id = 12,
-                    name = "Либо",
-                    Questionid = 4,
-                },
-                new Answer
-                {
-                    id = 13,
-                    name = "То",
-                    Questionid = 4,
-                },
-                new Answer
-                {
-                    id = 14,
-                    name = "Зачем",
-                    Questionid = 4,
-                },
-                new Answer
-                {
-                    id = 15,
-                    name = "Потому",
-                    Questionid = 4,
-                });
+               new Answer
+               {
+                   id = 5,
+                   name = "56",
+                   Questionid = 2,
+               },
+               new Answer
+               {
+                   id = 6,
+                   name = "40",
+                   Questionid = 2,
+               },
+               new Answer
+               {
+                   id = 7,
+                   name = "61",
+                   Questionid = 2,
+               },
+               new Answer
+               {
+                   id = 8,
+                   name = "52",
+                   Questionid = 2,
+               },
+               new Answer
+               {
+                   id = 9,
+                   name = "Да",
+                   Questionid = 3,
+               },
+               new Answer
+               {
+                   id = 10,
+                   name = "Конечно",
+                   Questionid = 3,
+               },
+               new Answer
+               {
+                   id = 11,
+                   name = "Ещё как",
+                   Questionid = 3,
+               },
+               new Answer
+               {
+                   id = 12,
+                   name = "Либо",
+                   Questionid = 4,
+               },
+               new Answer
+               {
+                   id = 13,
+                   name = "То",
+                   Questionid = 4,
+               },
+               new Answer
+               {
+                   id = 14,
+                   name = "Зачем",
+                   Questionid = 4,
+               },
+               new Answer
+               {
+                   id = 15,
+                   name = "Потому",
+                   Questionid = 4,
+               });
+
             modelBuilder.Entity<Test>().HasData(
                new Test
                {
@@ -195,16 +194,16 @@ namespace Rabota
                    id = 4,
                    result = "Геншин",
                });
-            
-           base.OnModelCreating(modelBuilder); //проверка почты на копии
+
+            base.OnModelCreating(modelBuilder); //проверка почты на копии
 
         }
-      
+
         public ApplicationContext() //просмотр классов
         {
-           // this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
+            //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
             this.Database.EnsureCreated(); //Создание БД (создает если не находит файл бд, или он пустой)
         }
-        
+
     }
 }
