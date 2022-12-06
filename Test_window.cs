@@ -20,6 +20,7 @@ namespace Rabota
     {
         ApplicationContext db = new ApplicationContext();
         Thread th;
+        int ID1 = 0;
         int quection_count;
         int correct_answers;
         int wrong_answers;
@@ -47,7 +48,12 @@ namespace Rabota
             int toSkip = rand.Next(0, db.Questions.Count());
             db.Questions.Skip(toSkip).Take(1).First();
 
-            //Name  = db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
+            Question question = db.Questions.FirstOrDefault(q => q.id == toSkip);
+            label1.Text = question.name;
+            question.name = label1.Text;
+
+            // Name  = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
+
 
             //try
             //{
@@ -58,10 +64,15 @@ namespace Rabota
             //    Console.WriteLine(ex.Message);
             //}
         }
+        private void ClearData1()
+        {
+            ID1 = 0;
+            label1.Text = "";
+            
+        }
         private void Test_window_Load(object sender, EventArgs e)
         {
-            sledvopros.Text = "Следующий вопрос";
-            zakonchit.Text = "Выход";
+            ;
 
             //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);

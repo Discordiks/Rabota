@@ -28,5 +28,6 @@ namespace Rabota.Entity
             }
 
         }
+        public int vernost { get; set; }
     }
 }
