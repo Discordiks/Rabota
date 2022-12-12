@@ -20,6 +20,7 @@ namespace Rabota
     {
         ApplicationContext db = new ApplicationContext();
         Thread th;
+        int ID1 = 0;
         int quection_count;
         int correct_answers;
         int wrong_answers;
@@ -50,9 +51,12 @@ namespace Rabota
             label1.Text = db.Questions.Rows[e.RowIndex].Cells[1].Value.ToString();
             label1.Text = db.Questions.Local.ToString();
 
-            //label1.Text = dataGridView1.Rows[0].Cells[0].ToString();
-            //label1.Text = dataSet1.Tables[0].Rows[0].ItemArray[0].ToString();
-            //Name = db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
+            Question question = db.Questions.FirstOrDefault(q => q.id == toSkip);
+            label1.Text = question.name;
+            question.name = label1.Text;
+
+            // Name  = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
+
 
             //try
             //{
@@ -63,8 +67,16 @@ namespace Rabota
             //    Console.WriteLine(ex.Message);
             //}
         }
+        private void ClearData1()
+        {
+            ID1 = 0;
+            label1.Text = "";
+            
+        }
         private void Test_window_Load(object sender, EventArgs e)
         {
+            ;
+
             //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton3.CheckedChanged += new EventHandler(состаяниеперключение);

@@ -87,90 +87,106 @@ namespace Rabota
                    id = 1,
                    name = "Саске",
                    Questionid = 1,
+                   vernost = 1,
+
                },
                new Answer
                {
                    id = 2,
                    name = "Какаси",
                    Questionid = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 3,
                    name = "Оротимару",
                    Questionid = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 4,
                    name = "Сакура",
                    Questionid = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 5,
                    name = "56",
                    Questionid = 2,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 6,
                    name = "40",
                    Questionid = 2,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 7,
                    name = "61",
                    Questionid = 2,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 8,
                    name = "52",
                    Questionid = 2,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 9,
                    name = "Да",
                    Questionid = 3,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 10,
                    name = "Конечно",
                    Questionid = 3,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 11,
                    name = "Ещё как",
                    Questionid = 3,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 12,
                    name = "Либо",
                    Questionid = 4,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 13,
                    name = "То",
                    Questionid = 4,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 14,
                    name = "Зачем",
                    Questionid = 4,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 15,
                    name = "Потому",
                    Questionid = 4,
+                   vernost = 0,
                });
 
             modelBuilder.Entity<Test>().HasData(
