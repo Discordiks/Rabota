@@ -28,18 +28,34 @@ namespace Rabota
                 MessageBox.Show("Данная почта уже используется");
                 return;
             }
-            User user = new User();
-            user.email = RegEmail.Text;
-            user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
-            user.reg_date = Convert.ToDateTime(DateTime.Now);
-            user.fam = Regfam.Text;
-            user.ima = Regima.Text;
-            user.otch = Regotch.Text;
-            user.datahb = DateTime.Parse(Regdatahb.Text);
+            try
+            {
+                User user = new User();
+                user.email = RegEmail.Text;
+                user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
+                user.reg_date = Convert.ToDateTime(DateTime.Now);
+                user.fam = Regfam.Text;
+                user.ima = Regima.Text;
+                user.otch = Regotch.Text;
+                user.datahb = DateTime.Parse(Regdatahb.Text);
 
-            db.Users.Add(user);
-            db.SaveChanges();
-            MessageBox.Show("Регистрация прошла успешно");
+                db.Users.Add(user);
+                db.SaveChanges();
+                MessageBox.Show("Регистрация прошла успешно");
+
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
+            
+                //if (RegEmail.Text == null)
+                //{
+                //    MessageBox.Show("Заполните все поля!");
+                //};
+                MessageBox.Show("Введите дату в номарльной форме!");
+           
+           // MessageBox.Show("Регистрация прошла успешно");
         }
     }
 }

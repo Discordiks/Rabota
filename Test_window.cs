@@ -41,13 +41,18 @@ namespace Rabota
 
             db.Questions.Include(t1 => t1.Type_Question).Load();
             db.Questions.Include(t2 => t2.Test).Load();
+            db.Answers.Include(t1 => t1.Question).Load();
 
 
-            Random rand = new Random();
-            int toSkip = rand.Next(0, db.Questions.Count());
-            db.Questions.Skip(toSkip).Take(1).First();
+            //Random rand = new Random();
+            //int toSkip = rand.Next(0, db.Questions.Count());
+            //db.Questions.Skip(toSkip).Take(1).First();
+            label1.Text = db.Questions.Rows[e.RowIndex].Cells[1].Value.ToString();
+            label1.Text = db.Questions.Local.ToString();
 
-            //Name  = db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
+            //label1.Text = dataGridView1.Rows[0].Cells[0].ToString();
+            //label1.Text = dataSet1.Tables[0].Rows[0].ItemArray[0].ToString();
+            //Name = db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
 
             //try
             //{
@@ -60,9 +65,6 @@ namespace Rabota
         }
         private void Test_window_Load(object sender, EventArgs e)
         {
-            sledvopros.Text = "Следующий вопрос";
-            zakonchit.Text = "Выход";
-
             //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton3.CheckedChanged += new EventHandler(состаяниеперключение);
@@ -184,6 +186,11 @@ namespace Rabota
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

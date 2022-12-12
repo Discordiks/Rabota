@@ -14,7 +14,6 @@ using System.Data.SQLite;
 using System.Reflection;
 
 
-
 namespace Rabota
 {
     public partial class Vopros : Form
@@ -23,13 +22,14 @@ namespace Rabota
         ApplicationContext db = new ApplicationContext();
         int ID1 = 0;
         int ID2 = 0;
+
         public Vopros()
         {
             InitializeComponent();
             dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
             dataGridView2.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView2_RowHeaderMouseClick1);
         }
-
+       
         private void Table_refresh()
         {
             db.Questions.Include(t1=>t1.Type_Question).Load();
@@ -37,6 +37,8 @@ namespace Rabota
             db.Answers.Include(t1 => t1.Question).Load();
             dataGridView1.DataSource = db.Questions.Local.ToBindingList();
             dataGridView2.DataSource = db.Answers.Local.ToBindingList();
+
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Purple;
 
             //if (tabControl1.SelectedTab == tabPage1)
             //{
@@ -69,7 +71,6 @@ namespace Rabota
             comboquestan.DataSource = db.Questions.ToList();
             comboquestan.DisplayMember = "name";
             comboquestan.ValueMember = "id";
-
             Table_refresh();
         }
 
@@ -147,6 +148,7 @@ namespace Rabota
         }
         private void dataGridView1_RowHeaderMouseClick1(object sender, DataGridViewCellMouseEventArgs e)
         {
+            
             ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             nameq.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             combotypeq.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
