@@ -25,37 +25,36 @@ namespace Rabota
         {
             try
             {
-
-
-                User user_e = db.Users.FirstOrDefault(u => u.email == RegEmail.Text);
-                if (user_e != null)
+                if (RegEmail.Text != "" && RegPas.Text != "" & Regfam.Text != "" & Regima.Text != "" & Regdatahb.Text != "")
                 {
-                    MessageBox.Show("Данная почта уже используется");
-                    return;
+                    User user_e = db.Users.FirstOrDefault(u => u.email == RegEmail.Text);
+                    if (user_e != null)
+                    {
+                        MessageBox.Show("Данная почта уже используется");
+                        return;
+                    }
+                    User user = new User();
+                    user.email = RegEmail.Text;
+                    user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
+                    user.reg_date = Convert.ToDateTime(DateTime.Now);
+                    user.fam = Regfam.Text;
+                    user.ima = Regima.Text;
+                    user.otch = Regotch.Text;
+                    user.datahb = DateTime.Parse(Regdatahb.Text);
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                    MessageBox.Show("Регистрация прошла успешно");
                 }
-
-                User user = new User();
-                user.email = RegEmail.Text;
-                user.password = BCrypt.Net.BCrypt.HashPassword(RegPas.Text); //меняем пароль
-                user.reg_date = Convert.ToDateTime(DateTime.Now);
-                user.fam = Regfam.Text;
-                user.ima = Regima.Text;
-                user.otch = Regotch.Text;
-                user.datahb = DateTime.Parse(Regdatahb.Text);
-
-                //if (RegEmail.Text == null && RegPas.Text == "" & Regfam.Text == "" & Regima.Text == "" & Regdatahb.Text == "")
-                //{
-                //    MessageBox.Show("Введите все данные");
-                //}
-                db.Users.Add(user);
-                db.SaveChanges();
-                MessageBox.Show("Регистрация прошла успешно");
+                else
+                {
+                    MessageBox.Show("Введите все данные");
+                }
 
 
             }
-            catch (Exception ef)
+            catch //(Exception ef)
             {
-                ef.Data.Add("user", Thread.CurrentPrincipal.Identity.Name);
+                //ef.Data.Add("user", Thread.CurrentPrincipal.Identity.Name);
                
                 MessageBox.Show("Введите дату");
                 

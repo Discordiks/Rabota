@@ -42,20 +42,35 @@ namespace Rabota
 
             db.Questions.Include(t1 => t1.Type_Question).Load();
             db.Questions.Include(t2 => t2.Test).Load();
-            db.Answers.Include(t1 => t1.Question).Load();
 
 
-            //Random rand = new Random();
-            //int toSkip = rand.Next(0, db.Questions.Count());
-            //db.Questions.Skip(toSkip).Take(1).First();
-            label1.Text = db.Questions.Rows[e.RowIndex].Cells[1].Value.ToString();
-            label1.Text = db.Questions.Local.ToString();
-
+            Random rand = new Random();
+            int toSkip = rand.Next(0, db.Questions.Count());
+            db.Questions.Skip(toSkip).Take(1).First();
             Question question = db.Questions.FirstOrDefault(q => q.id == toSkip);
             label1.Text = question.name;
             question.name = label1.Text;
 
-            // Name  = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
+            int a1 = Convert.ToInt32(question.id);
+            Answer answer = db.Answers.FirstOrDefault(p => p.Questionid == a1);
+            int q1 = Convert.ToInt32(answer.id);
+            if (question.id == answer.Questionid)
+            {
+                otvet1.Text = answer.name;
+                answer.name = otvet1.Text;
+                Answer answer2 = db.Answers.FirstOrDefault(p => p.id == q1 +1);
+                otvet2.Text = answer2.name;
+                answer2.name = otvet2.Text;
+                Answer answer3 = db.Answers.FirstOrDefault(p => p.id == q1 + 2);
+                otvet3.Text = answer3.name;
+                answer3.name = otvet3.Text;
+                Answer answer4 = db.Answers.FirstOrDefault(p => p.id == q1 + 3);
+                otvet4.Text = answer4.name;
+                answer4.name = otvet4.Text;
+            }
+           
+
+            //Name  = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
 
 
             //try
@@ -75,7 +90,7 @@ namespace Rabota
         }
         private void Test_window_Load(object sender, EventArgs e)
         {
-            ;
+            
 
             //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
@@ -123,15 +138,15 @@ namespace Rabota
         {
             label1.Text = Read.ReadLine();
 
-            radioButton1.Text = Read.ReadLine();
-            radioButton2.Text = Read.ReadLine();
-            radioButton3.Text = Read.ReadLine();
+            otvet1.Text = Read.ReadLine();
+            otvet2.Text = Read.ReadLine();
+            otvet3.Text = Read.ReadLine();
 
             correct_answers_number = int.Parse(Read.ReadLine());
 
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
+            otvet1.Checked = false;
+            otvet2.Checked = false;
+            otvet3.Checked = false;
 
             sledvopros.Enabled = false;
             quection_count = quection_count + 1;
@@ -163,9 +178,9 @@ namespace Rabota
             {
                 sledvopros.Text = "Следующий вопрос";
 
-                radioButton1.Visible = true;
-                radioButton2.Visible = true;
-                radioButton3.Visible = true;
+                otvet1.Visible = true;
+                otvet2.Visible = true;
+                otvet3.Visible = true;
 
                 start(); return;
             }
@@ -174,9 +189,9 @@ namespace Rabota
 
                 Read.Close();
 
-                radioButton1.Visible = false;
-                radioButton2.Visible = false;
-                radioButton3.Visible = false;
+                otvet1.Visible = false;
+                otvet2.Visible = false;
+                otvet3.Visible = false;
 
                 label1.Text = String.Format("Тестирование завершено.\n" +
                     "Правильных ответов: {0} из {1}.\n" +
