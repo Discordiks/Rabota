@@ -20,7 +20,6 @@ namespace Rabota
     {
         ApplicationContext db = new ApplicationContext();
         Thread th;
-        int ID1 = 0;
         int quection_count;
         int correct_answers;
         int wrong_answers;
@@ -35,21 +34,18 @@ namespace Rabota
         public Test_window()
         {
             InitializeComponent();
-            //dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick1);
         }
         private void Table_refresh()
         {
-
             db.Questions.Include(t1 => t1.Type_Question).Load();
             db.Questions.Include(t2 => t2.Test).Load();
-
 
             Random rand = new Random();
             int toSkip = rand.Next(0, db.Questions.Count());
             db.Questions.Skip(toSkip).Take(1).First();
             Question question = db.Questions.FirstOrDefault(q => q.id == toSkip);
-            label1.Text = question.name;
-            question.name = label1.Text;
+            textv1.Text = question.name;
+            question.name = textv1.Text;
 
             int a1 = Convert.ToInt32(question.id);
             Answer answer = db.Answers.FirstOrDefault(p => p.Questionid == a1);
@@ -58,20 +54,15 @@ namespace Rabota
             {
                 otvet1.Text = answer.name;
                 answer.name = otvet1.Text;
-                Answer answer2 = db.Answers.FirstOrDefault(p => p.id == q1 +1);
+                Answer answer2 = db.Answers.FirstOrDefault(p => p.id == q1 + 1);
                 otvet2.Text = answer2.name;
                 answer2.name = otvet2.Text;
                 Answer answer3 = db.Answers.FirstOrDefault(p => p.id == q1 + 2);
                 otvet3.Text = answer3.name;
                 answer3.name = otvet3.Text;
-                Answer answer4 = db.Answers.FirstOrDefault(p => p.id == q1 + 3);
-                otvet4.Text = answer4.name;
-                answer4.name = otvet4.Text;
             }
-           
-
-            //Name  = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
-
+            //Name = Convert.ToString(db.Questions.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First());
+            //создать таблицу тест, в которые я рандомно занесу вопросы с ответами, где 
 
             //try
             //{
@@ -82,16 +73,9 @@ namespace Rabota
             //    Console.WriteLine(ex.Message);
             //}
         }
-        private void ClearData1()
-        {
-            ID1 = 0;
-            label1.Text = "";
-            
-        }
+
         private void Test_window_Load(object sender, EventArgs e)
         {
-            
-
             //radioButton1.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton2.CheckedChanged += new EventHandler(состаяниеперключение);
             //radioButton3.CheckedChanged += new EventHandler(состаяниеперключение);
@@ -114,18 +98,18 @@ namespace Rabota
 
         void start()
         {
-            var Encoding = System.Text.Encoding.GetEncoding(65001);
+            //var Encoding = System.Text.Encoding.GetEncoding(65001);
             try
             {
 
-                Read = new System.IO.StreamReader(System.IO.Directory.GetCurrentDirectory()+@"\t.txt", Encoding);
-                this.Text = Read.ReadLine();
+                //Read = new System.IO.StreamReader(System.IO.Directory.GetCurrentDirectory()+@"\t.txt", Encoding);
+                //this.Text = Read.ReadLine();
 
                 quection_count = 0;
                 correct_answers = 0;
                 wrong_answers = 0;
 
-                array = new String[10];
+                array = new String[8];
             }
             catch (Exception)
             {
@@ -136,7 +120,7 @@ namespace Rabota
         }
         void vopros()
         {
-            label1.Text = Read.ReadLine();
+            textv1.Text = Read.ReadLine();
 
             otvet1.Text = Read.ReadLine();
             otvet2.Text = Read.ReadLine();
@@ -157,7 +141,8 @@ namespace Rabota
         void состаяниеперключение(object sender, EventArgs e)
         {
 
-            sledvopros.Enabled = true; sledvopros.Focus();
+            sledvopros.Enabled = true;
+            sledvopros.Focus();
             RadioButton Переключатель = (RadioButton)sender;
             var tmp = Переключатель.Name;
 
@@ -172,7 +157,7 @@ namespace Rabota
 
                 wrong_answers = wrong_answers + 1;
 
-                array[wrong_answers] = label1.Text;
+                array[wrong_answers] = textv1.Text;
             }
             if (sledvopros.Text == "Начать тестирование сначала")
             {
@@ -193,7 +178,7 @@ namespace Rabota
                 otvet2.Visible = false;
                 otvet3.Visible = false;
 
-                label1.Text = String.Format("Тестирование завершено.\n" +
+                textv1.Text = String.Format("Тестирование завершено.\n" +
                     "Правильных ответов: {0} из {1}.\n" +
                     "Набранные балы: {2:F2}.", correct_answers,
                     quection_count, (correct_answers * 5.0F) / quection_count);
@@ -217,9 +202,71 @@ namespace Rabota
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void vopros1_Click(object sender, EventArgs e)
         {
+            if (textv1.Text == "1")
+            {
+                Table_refresh();
+            }
+            //otvet1.Visible = true;
+            //otvet2.Visible = true;
+            //otvet3.Visible = true;
+        }
 
+        private void vopros2_Click(object sender, EventArgs e)
+        {
+            if (textv2.Text == "2")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros3_Click(object sender, EventArgs e)
+        {
+            if (textv3.Text == "3")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros4_Click(object sender, EventArgs e)
+        {
+            if (textv4.Text == "4")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros5_Click(object sender, EventArgs e)
+        {
+            if (textv5.Text == "5")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros6_Click(object sender, EventArgs e)
+        {
+            if (textv6.Text == "6")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros7_Click(object sender, EventArgs e)
+        {
+            if (textv7.Text == "7")
+            {
+                Table_refresh();
+            }
+        }
+
+        private void vopros8_Click(object sender, EventArgs e)
+        {
+            if (textv8.Text == "8")
+            {
+                Table_refresh();
+            }
         }
     }
 }

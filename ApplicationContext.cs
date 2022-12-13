@@ -98,7 +98,7 @@ namespace Rabota
                new Question
                {
                    id = 7,
-                   name = "Великая фраза Наруто?",
+                   name = "Великие фразы Наруто?",
                    Type_questionid = 2,
                    Testid = 2,
                },
@@ -134,7 +134,7 @@ namespace Rabota
                new Question
                {
                    id = 12,
-                   name = "Сколько игровых архонтов открыто на данный момент?",
+                   name = "Сколько игровых архонтов существует на данный момент?",
                    Type_questionid = 1,
                    Testid = 4,
                },
@@ -214,7 +214,7 @@ namespace Rabota
                {
                    id = 23,
                    name = "Среднее арифметическое чисел 16, 27, 98?",
-                   Type_questionid = 3,
+                   Type_questionid = 1,
                    Testid = 1,
                },
                new Question
@@ -228,7 +228,7 @@ namespace Rabota
                {
                    id = 25,
                    name = "Точка, равноудаленная от всех точек окружности?",
-                   Type_questionid = 1,
+                   Type_questionid = 3,
                    Testid = 1,
                },
                new Question
@@ -339,6 +339,7 @@ namespace Rabota
                );
 
             modelBuilder.Entity<Answer>().HasData(
+               //1
                new Answer
                {
                    id = 1,
@@ -361,617 +362,863 @@ namespace Rabota
                    Questionid = 1,
                    vernost = 0,
                },
+               //2
                new Answer
                {
                    id = 4,
-                   name = "Сакура",
-                   Questionid = 1,
-                   vernost = 0,
-               },
-               new Answer
-               {
-                   id = 5,
                    name = "Учиха",
                    Questionid = 2,
                    vernost = 1,
                },
                new Answer
                {
-                   id = 6,
+                   id = 5,
                    name = "Удзумаки",
                    Questionid = 2,
                    vernost = 0,
                },
                new Answer
                {
-                   id = 7,
+                   id = 6,
                    name = "Шукаку",
                    Questionid = 2,
                    vernost = 0,
                },
+               //3
                new Answer
                {
-                   id = 8,
-                   name = "Миядзаки",
-                   Questionid = 2,
-                   vernost = 0,
-               },
-               new Answer
-               {
-                   id = 9,
+                   id = 7,
                    name = "Саске Учиха",
                    Questionid = 3,
                    vernost = 0,
                },
                new Answer
                {
-                   id = 10,
+                   id = 8,
                    name = "Яшуно Кабуто",
                    Questionid = 3,
                    vernost = 1,
                },
                new Answer
                {
-                   id = 11,
+                   id = 9,
                    name = "Оротимару",
                    Questionid = 3,
                    vernost = 0,
                },
+               //4
                new Answer
                {
-                   id = 12,
+                   id = 10,
                    name = "Мадара",
-                   Questionid = 3,
+                   Questionid = 4,
                    vernost = 0,
                },
                new Answer
                {
-                   id = 13,
+                   id = 11,
                    name = "Хаширама",
                    Questionid = 4,
                    vernost = 0,
                },
                new Answer
                {
-                   id = 14,
-                   name = "Джирайя",
+                   id = 12,
+                   name = "Учиха Итачи",
                    Questionid = 4,
+                   vernost = 1,
+               },
+               //5
+               new Answer
+               {
+                   id = 13,
+                   name = "Шаринган",
+                   Questionid = 5,
+                   vernost = 1,
+               },
+               new Answer
+               {
+                   id = 14,
+                   name = "Рассенган",
+                   Questionid = 5,
                    vernost = 0,
                },
                new Answer
                {
                    id = 15,
-                   name = "Сакура",
-                   Questionid = 4,
-                   vernost = 0,
+                   name = "Сусано",
+                   Questionid = 5,
+                   vernost = 1,
                },
+               //6
                new Answer
                {
                    id = 16,
-                   name = "Учиха Итачи",
-                   Questionid = 4,
-                   vernost = 1,
+                   name = "Сакура",
+                   Questionid = 6,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 17,
-                   name = "Сакура",
-                   Questionid = 5,
-                   vernost = 0,
+                   name = "Мадара",
+                   Questionid = 6,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 18,
-                   name = "Сакура",
-                   Questionid = 5,
+                   name = "Наруто",
+                   Questionid = 6,
                    vernost = 0,
                },
+               //7
                new Answer
                {
                    id = 19,
-                   name = "Сакура",
-                   Questionid = 5,
-                   vernost = 0,
+                   name = "Я стану Хокаге!",
+                   Questionid = 7,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 20,
-                   name = "Сакура",
-                   Questionid = 5,
+                   name = "Я обязательно сдам экзамен!",
+                   Questionid = 7,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 21,
-                   name = "Сакура",
-                   Questionid = 6,
-                   vernost = 0,
+                   name = "Это мой путь ниндзя!",
+                   Questionid = 7,
+                   vernost = 1,
                },
+               //8
                new Answer
                {
                    id = 22,
-                   name = "Сакура",
-                   Questionid = 6,
-                   vernost = 0,
+                   name = "Гаара",
+                   Questionid = 8,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 23,
-                   name = "Сакура",
-                   Questionid = 6,
+                   name = "Джирайя",
+                   Questionid = 8,
                    vernost = 0,
                },
                new Answer
                {
                    id = 24,
-                   name = "Сакура",
-                   Questionid = 6,
+                   name = "Пейн",
+                   Questionid = 8,
                    vernost = 0,
                },
-               //
+               //9
                new Answer
                {
                    id = 25,
-                   name = "Сакура",
-                   Questionid = 7,
+                   name = "32 мягких удара",
+                   Questionid = 9,
                    vernost = 0,
                },
                new Answer
                {
                    id = 26,
-                   name = "Сакура",
-                   Questionid = 7,
-                   vernost = 0,
+                   name = "Чидори",
+                   Questionid = 9,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 27,
-                   name = "Сакура",
-                   Questionid = 7,
+                   name = "Раасенган",
+                   Questionid = 9,
                    vernost = 0,
                },
+               //10
                new Answer
                {
                    id = 28,
-                   name = "Сакура",
-                   Questionid = 7,
-                   vernost = 0,
+                   name = "3",
+                   Questionid = 10,
+                   vernost = 1,
                },
-               //
                new Answer
                {
                    id = 29,
-                   name = "Сакура",
-                   Questionid = 8,
+                   name = "8",
+                   Questionid = 10,
                    vernost = 0,
                },
                new Answer
                {
                    id = 30,
-                   name = "Сакура",
-                   Questionid = 8,
+                   name = "5",
+                   Questionid = 10,
                    vernost = 0,
                },
+               //11
                new Answer
                {
                    id = 31,
-                   name = "Сакура",
-                   Questionid = 8,
-                   vernost = 0,
+                   name = "54",
+                   Questionid = 11,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 32,
-                   name = "Сакура",
-                   Questionid = 8,
+                   name = "60",
+                   Questionid = 11,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 33,
-                   name = "Сакура",
-                   Questionid = 9,
+                   name = "48",
+                   Questionid = 11,
                    vernost = 0,
                },
+               //12
                new Answer
                {
                    id = 34,
-                   name = "Сакура",
-                   Questionid = 9,
+                   name = "2",
+                   Questionid = 12,
                    vernost = 0,
                },
                new Answer
                {
                    id = 35,
-                   name = "Сакура",
-                   Questionid = 9,
+                   name = "3",
+                   Questionid = 12,
                    vernost = 0,
                },
                new Answer
                {
                    id = 36,
-                   name = "Сакура",
-                   Questionid = 9,
-                   vernost = 0,
+                   name = "4",
+                   Questionid = 12,
+                   vernost = 1,
                },
-               //
+               //13
                new Answer
                {
                    id = 37,
-                   name = "Сакура",
-                   Questionid = 10,
+                   name = "Электро",
+                   Questionid = 13,
                    vernost = 0,
                },
                new Answer
                {
                    id = 38,
-                   name = "Сакура",
-                   Questionid = 10,
-                   vernost = 0,
+                   name = "Анемо",
+                   Questionid = 13,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 39,
-                   name = "Сакура",
-                   Questionid = 10,
+                   name = "Гео",
+                   Questionid = 13,
                    vernost = 0,
                },
+               //14
                new Answer
                {
                    id = 40,
-                   name = "Сакура",
-                   Questionid = 10,
+                   name = "Райден",
+                   Questionid = 14,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 41,
-                   name = "Сакура",
-                   Questionid = 11,
+                   name = "Сяо",
+                   Questionid = 14,
                    vernost = 0,
                },
                new Answer
                {
                    id = 42,
-                   name = "Сакура",
-                   Questionid = 11,
-                   vernost = 0,
+                   name = "Итто",
+                   Questionid = 14,
+                   vernost = 1,
                },
+               //15
                new Answer
                {
                    id = 43,
-                   name = "Сакура",
-                   Questionid = 11,
-                   vernost = 0,
+                   name = "Тиграни",
+                   Questionid = 15,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 44,
-                   name = "Сакура",
-                   Questionid = 11,
-                   vernost = 0,
+                   name = "Коллеи",
+                   Questionid = 15,
+                   vernost = 1,
                },
-               //
                new Answer
                {
                    id = 45,
-                   name = "Сакура",
-                   Questionid = 12,
-                   vernost = 0,
+                   name = "Аль-Хайтам",
+                   Questionid = 15,
+                   vernost = 1,
                },
+               //16
                new Answer
                {
                    id = 46,
-                   name = "Сакура",
-                   Questionid = 12,
+                   name = "80",
+                   Questionid = 16,
                    vernost = 0,
                },
                new Answer
                {
                    id = 47,
-                   name = "Сакура",
-                   Questionid = 12,
-                   vernost = 0,
+                   name = "90",
+                   Questionid = 16,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 48,
-                   name = "Сакура",
-                   Questionid = 12,
+                   name = "70",
+                   Questionid = 16,
                    vernost = 0,
 
                },
-               //
+               //17
                new Answer
                {
                    id = 49,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Настя",
+                   Questionid = 17,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 50,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Syntonyme",
+                   Questionid = 17,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 51,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Анастасия Веретенникова",
+                   Questionid = 17,
+                   vernost = 1,
                },
+               //18
                new Answer
                {
                    id = 52,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Дотторе",
+                   Questionid = 18,
+                   vernost = 1,
                },
-               //
                new Answer
                {
                    id = 53,
-                   name = "Сакура",
-                   Questionid = 12,
+                   name = "Нахида",
+                   Questionid = 18,
                    vernost = 0,
                },
                new Answer
                {
                    id = 54,
-                   name = "Сакура",
-                   Questionid = 12,
-                   vernost = 0,
+                   name = "Тарталья",
+                   Questionid = 18,
+                   vernost = 1,
                },
+               //19
                new Answer
                {
                    id = 55,
-                   name = "Сакура",
-                   Questionid = 12,
+                   name = "Пиро",
+                   Questionid = 19,
                    vernost = 0,
                },
                new Answer
                {
                    id = 56,
-                   name = "Сакура",
-                   Questionid = 12,
+                   name = "Гео",
+                   Questionid = 19,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 57,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Дендро",
+                   Questionid = 19,
+                   vernost = 1,
                },
+               //20
                new Answer
                {
                    id = 58,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Конечно (нет)",
+                   Questionid = 20,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 59,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Обязательно",
+                   Questionid = 20,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 60,
-                   name = "Сакура",
-                   Questionid = 13,
-                   vernost = 0,
+                   name = "Уже",
+                   Questionid = 20,
+                   vernost = 1,
                },
-               //
+               //21
                new Answer
                {
                    id = 61,
-                   name = "Сакура",
-                   Questionid = 14,
-                   vernost = 0,
+                   name = "Да",
+                   Questionid = 21,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 62,
-                   name = "Сакура",
-                   Questionid = 14,
-                   vernost = 0,
+                   name = "Конечно",
+                   Questionid = 21,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 63,
-                   name = "Сакура",
-                   Questionid = 14,
-                   vernost = 0,
+                   name = "Ещё как",
+                   Questionid = 21,
+                   vernost = 1,
                },
+               //22
                new Answer
                {
                    id = 64,
-                   name = "Сакура",
-                   Questionid = 14,
-                   vernost = 0,
+                   name = "75",
+                   Questionid = 22,
+                   vernost = 1,
                },
-               //
                new Answer
                {
                    id = 65,
-                   name = "Сакура",
-                   Questionid = 15,
+                   name = "20",
+                   Questionid = 22,
                    vernost = 0,
                },
                new Answer
                {
                    id = 66,
-                   name = "Сакура",
-                   Questionid = 15,
+                   name = "3",
+                   Questionid = 22,
                    vernost = 0,
                },
+               //23
                new Answer
                {
                    id = 67,
-                   name = "Сакура",
-                   Questionid = 15,
-                   vernost = 0,
+                   name = "47",
+                   Questionid = 23,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 68,
-                   name = "Сакура",
-                   Questionid = 15,
+                   name = "33",
+                   Questionid = 23,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 69,
-                   name = "Сакура",
-                   Questionid = 16,
+                   name = "27",
+                   Questionid = 23,
                    vernost = 0,
                },
+               //24
                new Answer
                {
                    id = 70,
-                   name = "Сакура",
-                   Questionid = 16,
-                   vernost = 0,
+                   name = "1023",
+                   Questionid = 24,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 71,
-                   name = "Сакура",
-                   Questionid = 16,
+                   name = "0123",
+                   Questionid = 24,
                    vernost = 0,
                },
                new Answer
                {
                    id = 72,
-                   name = "Сакура",
-                   Questionid = 16,
+                   name = "1234",
+                   Questionid = 24,
                    vernost = 0,
                },
-               //
+               //25
                new Answer
                {
                    id = 73,
-                   name = "Сакура",
-                   Questionid = 17,
+                   name = "Цель",
+                   Questionid = 25,
                    vernost = 0,
                },
                new Answer
                {
                    id = 74,
-                   name = "Сакура",
-                   Questionid = 17,
+                   name = "Точка",
+                   Questionid = 25,
                    vernost = 0,
                },
                new Answer
                {
                    id = 75,
-                   name = "Сакура",
-                   Questionid = 17,
-                   vernost = 0,
+                   name = "Центр",
+                   Questionid = 25,
+                   vernost = 1,
                },
+               //26
                new Answer
                {
                    id = 76,
-                   name = "Сакура",
-                   Questionid = 17,
+                   name = "Равенство выражений",
+                   Questionid = 26,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 77,
-                   name = "Сакура",
-                   Questionid = 18,
-                   vernost = 0,
+                   name = "Уравнение",
+                   Questionid = 26,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 78,
-                   name = "Сакура",
-                   Questionid = 18,
+                   name = "Система",
+                   Questionid = 26,
                    vernost = 0,
                },
+               //27
                new Answer
                {
                    id = 79,
                    name = "Сакура",
-                   Questionid = 18,
+                   Questionid = 27,
                    vernost = 0,
                },
                new Answer
                {
                    id = 80,
                    name = "Сакура",
-                   Questionid = 18,
+                   Questionid = 27,
                    vernost = 0,
                },
-               //
                new Answer
                {
                    id = 81,
                    name = "Сакура",
-                   Questionid = 19,
+                   Questionid = 27,
                    vernost = 0,
                },
+               //28
                new Answer
                {
                    id = 82,
                    name = "Сакура",
-                   Questionid = 19,
+                   Questionid = 28,
                    vernost = 0,
                },
                new Answer
                {
                    id = 83,
                    name = "Сакура",
-                   Questionid = 19,
+                   Questionid = 28,
                    vernost = 0,
                },
                new Answer
                {
                    id = 84,
                    name = "Сакура",
-                   Questionid = 20,
+                   Questionid = 28,
                    vernost = 0,
                },
-               //
+               //29
                new Answer
                {
                    id = 85,
                    name = "Сакура",
-                   Questionid = 21,
+                   Questionid = 29,
                    vernost = 0,
                },
                new Answer
                {
                    id = 86,
                    name = "Сакура",
-                   Questionid = 21,
+                   Questionid = 29,
                    vernost = 0,
                },
                new Answer
                {
                    id = 87,
                    name = "Сакура",
-                   Questionid = 21,
+                   Questionid = 29,
                    vernost = 0,
                },
+               //30
                new Answer
                {
                    id = 88,
                    name = "Сакура",
-                   Questionid = 21,
+                   Questionid = 30,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 89,
+                   name = "Сакура",
+                   Questionid = 30,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 90,
+                   name = "Сакура",
+                   Questionid = 30,
+                   vernost = 0,
+               },
+               //31
+               new Answer
+               {
+                   id = 91,
+                   name = "Сакура",
+                   Questionid = 31,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 92,
+                   name = "Сакура",
+                   Questionid = 31,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 93,
+                   name = "Сакура",
+                   Questionid = 31,
+                   vernost = 0,
+               },
+               //32
+               new Answer
+               {
+                   id = 94,
+                   name = "Сакура",
+                   Questionid = 32,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 95,
+                   name = "Сакура",
+                   Questionid = 32,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 96,
+                   name = "Сакура",
+                   Questionid = 32,
+                   vernost = 0,
+               },
+               //33
+               new Answer
+               {
+                   id = 97,
+                   name = "Сакура",
+                   Questionid = 33,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 98,
+                   name = "Сакура",
+                   Questionid = 33,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 99,
+                   name = "Сакура",
+                   Questionid = 33,
+                   vernost = 0,
+               },
+               //34
+               new Answer
+               {
+                   id = 100,
+                   name = "Сакура",
+                   Questionid = 34,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 101,
+                   name = "Сакура",
+                   Questionid = 34,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 102,
+                   name = "Сакура",
+                   Questionid = 34,
+                   vernost = 0,
+               },
+               //35
+               new Answer
+               {
+                   id = 103,
+                   name = "Сакура",
+                   Questionid = 35,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 104,
+                   name = "Сакура",
+                   Questionid = 35,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 105,
+                   name = "Сакура",
+                   Questionid = 35,
+                   vernost = 0,
+               },
+               //36
+               new Answer
+               {
+                   id = 106,
+                   name = "Сакура",
+                   Questionid = 36,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 107,
+                   name = "Сакура",
+                   Questionid = 36,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 108,
+                   name = "Сакура",
+                   Questionid = 36,
+                   vernost = 0,
+               },
+               //37
+               new Answer
+               {
+                   id = 109,
+                   name = "Сакура",
+                   Questionid = 37,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 110,
+                   name = "Сакура",
+                   Questionid = 37,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 111,
+                   name = "Сакура",
+                   Questionid = 37,
+                   vernost = 0,
+               },
+               //38
+               new Answer
+               {
+                   id = 112,
+                   name = "Сакура",
+                   Questionid = 38,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 113,
+                   name = "Сакура",
+                   Questionid = 38,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 114,
+                   name = "Сакура",
+                   Questionid = 38,
+                   vernost = 0,
+               },
+               //39
+               new Answer
+               {
+                   id = 115,
+                   name = "Сакура",
+                   Questionid = 39,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 116,
+                   name = "Сакура",
+                   Questionid = 39,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 117,
+                   name = "Сакура",
+                   Questionid = 39,
+                   vernost = 0,
+               },
+               //40
+               new Answer
+               {
+                   id = 118,
+                   name = "Сакура",
+                   Questionid = 40,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 119,
+                   name = "Сакура",
+                   Questionid = 40,
+                   vernost = 0,
+               },
+               new Answer
+               {
+                   id = 120,
+                   name = "Сакура",
+                   Questionid = 40,
                    vernost = 0,
                });
 

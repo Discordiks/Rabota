@@ -16,8 +16,5 @@ namespace Rabota.Entity
         [Column(TypeName = "varchar(255)")]
         public string result { get; set; }
         
-
-
-
     }
 }
