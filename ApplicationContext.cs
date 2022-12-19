@@ -652,7 +652,7 @@ namespace Rabota
                new Answer
                {
                    id = 43,
-                   name = "Тиграни",
+                   name = "Тигнари",
                    Questionid = 15,
                    vernost = 1,
                },
@@ -1226,22 +1226,22 @@ namespace Rabota
                new Test
                {
                    id = 1,
-                   result = "Математика",
+                   name = "Математика",
                },
                new Test
                {
                    id = 2,
-                   result = "Русский язык",
+                   name = "Русский язык",
                },
                new Test
                {
                    id = 3,
-                   result = "Наруто",
+                   name = "Наруто",
                },
                new Test
                {
                    id = 4,
-                   result = "Геншин",
+                   name = "Геншин",
                });
 
             base.OnModelCreating(modelBuilder); //проверка почты на копии

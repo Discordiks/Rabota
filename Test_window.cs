@@ -20,17 +20,8 @@ namespace Rabota
     {
         ApplicationContext db = new ApplicationContext();
         Thread th;
-        int quection_count;
-        int correct_answers;
-        int wrong_answers;
+        int cur = 0;
 
-        string[] array;
-
-        int correct_answers_number;
-        int selected_response;
-
-
-        System.IO.StreamReader Read;
         public Test_window()
         {
             InitializeComponent();
@@ -39,6 +30,10 @@ namespace Rabota
         {
             db.Questions.Include(t1 => t1.Type_Question).Load();
             db.Questions.Include(t2 => t2.Test).Load();
+
+            //int usernow = ApplicationContext.DbSet<User>.id;
+            //var data = db.Questions.Where(t => t.id == usernow).ToList();
+
 
             Random rand = new Random();
             int toSkip = rand.Next(0, db.Questions.Count());
@@ -96,106 +91,10 @@ namespace Rabota
             Application.Run(new Students_acc());
         }
 
-        void start()
-        {
-            //var Encoding = System.Text.Encoding.GetEncoding(65001);
-            try
-            {
-
-                //Read = new System.IO.StreamReader(System.IO.Directory.GetCurrentDirectory()+@"\t.txt", Encoding);
-                //this.Text = Read.ReadLine();
-
-                quection_count = 0;
-                correct_answers = 0;
-                wrong_answers = 0;
-
-                array = new String[8];
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("ошибка 1");
-            }
-            vopros();
-
-        }
-        void vopros()
-        {
-            textv1.Text = Read.ReadLine();
-
-            otvet1.Text = Read.ReadLine();
-            otvet2.Text = Read.ReadLine();
-            otvet3.Text = Read.ReadLine();
-
-            correct_answers_number = int.Parse(Read.ReadLine());
-
-            otvet1.Checked = false;
-            otvet2.Checked = false;
-            otvet3.Checked = false;
-
-            sledvopros.Enabled = false;
-            quection_count = quection_count + 1;
-
-            if (Read.EndOfStream == true) sledvopros.Text = "Завершить";
-
-        }
-        void состаяниеперключение(object sender, EventArgs e)
-        {
-
-            sledvopros.Enabled = true;
-            sledvopros.Focus();
-            RadioButton Переключатель = (RadioButton)sender;
-            var tmp = Переключатель.Name;
-
-            selected_response = int.Parse(tmp.Substring(11));
-        }
-        private void sledvopros_Click(object sender, EventArgs e)
-        {
-            if (selected_response == correct_answers_number) correct_answers =
-                                              correct_answers + 1;
-            if (selected_response != correct_answers_number)
-            {
-
-                wrong_answers = wrong_answers + 1;
-
-                array[wrong_answers] = textv1.Text;
-            }
-            if (sledvopros.Text == "Начать тестирование сначала")
-            {
-                sledvopros.Text = "Следующий вопрос";
-
-                otvet1.Visible = true;
-                otvet2.Visible = true;
-                otvet3.Visible = true;
-
-                start(); return;
-            }
-            if (sledvopros.Text == "Завершить")
-            {
-
-                Read.Close();
-
-                otvet1.Visible = false;
-                otvet2.Visible = false;
-                otvet3.Visible = false;
-
-                textv1.Text = String.Format("Тестирование завершено.\n" +
-                    "Правильных ответов: {0} из {1}.\n" +
-                    "Набранные балы: {2:F2}.", correct_answers,
-                    quection_count, (correct_answers * 5.0F) / quection_count);
-
-                sledvopros.Text = "Начать тестирование сначала";
-
-                var Str = "Список ошибок " +
-                          ":\n\n";
-                for (int i = 1; i <= wrong_answers; i++)
-                    Str = Str + array[i] + "\n";
-
-
-                if (wrong_answers != 0) MessageBox.Show(
-                                          Str, "Тестирование завершено");
-            }
-            if (sledvopros.Text == "Следующий вопрос") vopros();
-        }
+        
+        
+        
+            
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -267,6 +166,11 @@ namespace Rabota
             {
                 Table_refresh();
             }
+        }
+
+        private void sledvopros_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

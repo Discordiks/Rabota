@@ -34,7 +34,7 @@ namespace Rabota.Entity
         {
             get
             {
-                return Test.result;
+                return Test.name;
             }
 
         }

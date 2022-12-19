@@ -14,7 +14,35 @@ namespace Rabota.Entity
 
         [Required]
         [Column(TypeName = "varchar(255)")]
-        public string result { get; set; }
-        
+        public string name { get; set; }
+
+        //[Required]
+        //[Column(TypeName = "varchar(255)")]
+        //public string name { get; set; }
+
+        //public int Questionid { get; set; }
+        //public virtual Question Question { get; set; }    // навигационное свойство
+
+        //public virtual string Type_Question_name
+        //{
+        //    get
+        //    {
+        //        return Question.name;
+        //    }
+
+        //}
+        //public int Answerid { get; set; }
+        //public virtual Answer Answer { get; set; }    // навигационное свойство
+
+        //public virtual string Answer_name
+        //{
+        //    get
+        //    {
+        //        return Answer.name;
+        //    }
+
+        //}
+
     }
+
 }

@@ -65,7 +65,7 @@ namespace Rabota
             combotypeq.ValueMember = "id";
 
             combotestq.DataSource = db.Tests.ToList();
-            combotestq.DisplayMember = "result";
+            combotestq.DisplayMember = "name";
             combotestq.ValueMember = "id";
 
             comboquestan.DataSource = db.Questions.ToList();
