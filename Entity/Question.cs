@@ -28,7 +28,7 @@ namespace Rabota.Entity
             
         }
         public int Testid { get; set; }
-        public virtual Test Test { get; set; }    // навигационное свойство
+        public Test Test { get; set; }    // навигационное свойство
 
         public virtual string Test_result
         {

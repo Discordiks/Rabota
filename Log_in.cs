@@ -34,6 +34,8 @@ namespace Rabota
             }
             if (BCrypt.Net.BCrypt.Verify(outpass.Text, user.password))
             {
+                User_info.user_id = user.id;
+                User_info.user_ima = user.ima;
                 if (outemail.Text ==  "е@mail.ru")
                 {
                     MessageBox.Show("Всё верно, вы учитель, проходите");

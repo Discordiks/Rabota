@@ -45,7 +45,7 @@ namespace Rabota
             this.matem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matem.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matem.Location = new System.Drawing.Point(152, 111);
-            this.matem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.matem.Margin = new System.Windows.Forms.Padding(2);
             this.matem.Name = "matem";
             this.matem.Size = new System.Drawing.Size(202, 54);
             this.matem.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace Rabota
             this.rus_z.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rus_z.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rus_z.Location = new System.Drawing.Point(152, 197);
-            this.rus_z.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rus_z.Margin = new System.Windows.Forms.Padding(2);
             this.rus_z.Name = "rus_z";
             this.rus_z.Size = new System.Drawing.Size(202, 54);
             this.rus_z.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace Rabota
             this.liter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.liter.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.liter.Location = new System.Drawing.Point(152, 280);
-            this.liter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.liter.Margin = new System.Windows.Forms.Padding(2);
             this.liter.Name = "liter";
             this.liter.Size = new System.Drawing.Size(202, 54);
             this.liter.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace Rabota
             this.genshin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.genshin.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genshin.Location = new System.Drawing.Point(152, 363);
-            this.genshin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.genshin.Margin = new System.Windows.Forms.Padding(2);
             this.genshin.Name = "genshin";
             this.genshin.Size = new System.Drawing.Size(202, 54);
             this.genshin.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace Rabota
             this.Pochta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pochta.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pochta.Location = new System.Drawing.Point(713, 132);
-            this.Pochta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pochta.Margin = new System.Windows.Forms.Padding(2);
             this.Pochta.Name = "Pochta";
             this.Pochta.Size = new System.Drawing.Size(202, 54);
             this.Pochta.TabIndex = 5;
@@ -125,7 +125,7 @@ namespace Rabota
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.Location = new System.Drawing.Point(713, 289);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(202, 77);
             this.exit.TabIndex = 6;
@@ -139,7 +139,7 @@ namespace Rabota
             this.procent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.procent.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.procent.Location = new System.Drawing.Point(713, 197);
-            this.procent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.procent.Margin = new System.Windows.Forms.Padding(2);
             this.procent.Name = "procent";
             this.procent.Size = new System.Drawing.Size(202, 71);
             this.procent.TabIndex = 7;
@@ -160,10 +160,11 @@ namespace Rabota
             this.Controls.Add(this.liter);
             this.Controls.Add(this.rus_z);
             this.Controls.Add(this.matem);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Students_acc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ваш аккаунт";
+            this.Load += new System.EventHandler(this.Students_acc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

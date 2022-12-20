@@ -8,15 +8,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Rabota.Entity
 {
-    public class Type_question
+    public class Start_test_q
     {
-
         public int id { get; set; }
 
-        [Required]
-        [Column(TypeName = "varchar(255)")]
-        public string name { get; set; }
-            
+        public int user_answer { get; set; }
+
+        public Start_test start_Test { get; set; }
+
+        public Question question { get; set; }
 
     }
 }

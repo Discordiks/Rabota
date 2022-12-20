@@ -32,13 +32,19 @@ namespace Rabota
         }
         private void matem_Click(object sender, EventArgs e)
         {
-
-            //Question question = new Question();
-            //question.name = "";
-
-
-            //db.Questions.Add(question);
-            //db.SaveChanges();
+           
+            List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
+            Random ran = new Random();
+            questions = questions.OrderBy(_ => ran.Next()).ToList();
+            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id};
+           //надо проверить есть ли тест уже или нет
+            db.Start_Tests.Add(start_Test);
+            for (int i = 0; i < questions.Count; i++)
+            {
+                Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
+                db.Start_Tests_q.Add(start_Test_Q);
+            }
+            db.SaveChanges();
             MessageBox.Show("Открытие теста по математике");
             this.Close();
             th = new Thread(open);
@@ -90,6 +96,11 @@ namespace Rabota
             this.TopMost = true; //открытие формы "самой верхней формой"
 
 
+        }
+
+        private void Students_acc_Load(object sender, EventArgs e)
+        {
+            fio.Text = User_info.user_ima;
         }
     }
 }

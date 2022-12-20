@@ -175,6 +175,8 @@
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="Entity\Answer.cs" />
     <Compile Include="Entity\Question.cs" />
+    <Compile Include="Entity\Start_test.cs" />
+    <Compile Include="Entity\Start_test_q.cs" />
     <Compile Include="Entity\Test.cs" />
     <Compile Include="Entity\Type_question.cs" />
     <Compile Include="Entity\User.cs" />
@@ -184,6 +186,7 @@
     <Compile Include="Teachers_acc.Designer.cs">
       <DependentUpon>Teachers_acc.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_info.cs" />
     <Compile Include="Vopros.cs">
       <SubType>Form</SubType>
     </Compile>

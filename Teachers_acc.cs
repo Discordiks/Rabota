@@ -15,6 +15,7 @@ namespace Rabota
 {
     public partial class Teachers_acc : Form
     {
+        ApplicationContext db = new ApplicationContext();
         Thread th;
         public Teachers_acc()
         {
@@ -31,8 +32,9 @@ namespace Rabota
         {
             Application.Run(new Vopros());
         }
+        
 
-        private void exit_Click(object sender, EventArgs e)
+            private void exit_Click(object sender, EventArgs e)
         {
             DialogResult resulttt = MessageBox.Show("Уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo);
             if (resulttt == DialogResult.Yes)

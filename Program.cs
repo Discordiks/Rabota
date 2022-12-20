@@ -20,7 +20,7 @@ namespace Rabota
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test_window());
+            Application.Run(new Log_in());
 
         }
     }

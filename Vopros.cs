@@ -114,7 +114,7 @@ namespace Rabota
             // Добавление в "Школьники"
             if (tabControl1.SelectedTab == tabPage1)
             {
-                Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Testid = Convert.ToInt32(combotestq.SelectedValue.ToString()) };
+                Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()) )};
 
                 db.Questions.Add(tom);
                 db.SaveChanges();
@@ -171,7 +171,7 @@ namespace Rabota
                     Question question = db.Questions.FirstOrDefault(q => q.id == ID1);
                     question.name = nameq.Text;
                     question.Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
-                    question.Testid = Convert.ToInt32(combotestq.SelectedValue.ToString());
+                    question.Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()));
 
                     db.SaveChanges();
                     dataGridView1.Refresh();

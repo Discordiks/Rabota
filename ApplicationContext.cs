@@ -18,6 +18,9 @@ namespace Rabota
         public DbSet<Type_question> Type_Questions { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
+        public DbSet<Start_test_q> Start_Tests_q { get; set; }
+        public DbSet<Start_test> Start_Tests { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,6 +37,28 @@ namespace Rabota
             //modelBuilder.Entity<Entity.Test>().HasKey(p => p.id);
             //эта почта будет уникальной
 
+
+            modelBuilder.Entity<Test>().HasData(
+              new Test
+              {
+                  id = 1,
+                  name = "Математика",
+              },
+              new Test
+              {
+                  id = 2,
+                  name = "Русский язык",
+              },
+              new Test
+              {
+                  id = 3,
+                  name = "Наруто",
+              },
+              new Test
+              {
+                  id = 4,
+                  name = "Геншин",
+              });
             modelBuilder.Entity<Type_question>().HasData(
                 new Type_question
                 {
@@ -1222,27 +1247,7 @@ namespace Rabota
                    vernost = 0,
                });
 
-            modelBuilder.Entity<Test>().HasData(
-               new Test
-               {
-                   id = 1,
-                   name = "Математика",
-               },
-               new Test
-               {
-                   id = 2,
-                   name = "Русский язык",
-               },
-               new Test
-               {
-                   id = 3,
-                   name = "Наруто",
-               },
-               new Test
-               {
-                   id = 4,
-                   name = "Геншин",
-               });
+           
 
             base.OnModelCreating(modelBuilder); //проверка почты на копии
 
@@ -1250,7 +1255,7 @@ namespace Rabota
 
         public ApplicationContext() //просмотр классов
         {
-            this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
+            //this.Database.EnsureDeleted(); //удаление БД (использовать если изменили структуру)
             this.Database.EnsureCreated(); //Создание БД (создает если не находит файл бд, или он пустой)
         }
 
