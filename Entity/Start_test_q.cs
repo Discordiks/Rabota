@@ -11,7 +11,6 @@ namespace Rabota.Entity
     public class Start_test_q
     {
         public int id { get; set; }
-
         public int user_answer { get; set; }
 
         public Start_test start_Test { get; set; }

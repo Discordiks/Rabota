@@ -261,7 +261,7 @@ namespace Rabota
                    id = 26,
                    name = "Равенство, устанавливающее связь между независимой искомой величиной и известными величинами?",
                    Type_questionid = 1,
-                   Testid = 3,
+                   Testid = 1,
                },
                new Question
                {

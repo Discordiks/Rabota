@@ -36,7 +36,7 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id};
+            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id}; // создание 
            //надо проверить есть ли тест уже или нет
             db.Start_Tests.Add(start_Test);
             for (int i = 0; i < questions.Count; i++)
@@ -45,6 +45,7 @@ namespace Rabota
                 db.Start_Tests_q.Add(start_Test_Q);
             }
             db.SaveChanges();
+            User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
             MessageBox.Show("Открытие теста по математике");
             this.Close();
             th = new Thread(open);
@@ -55,6 +56,18 @@ namespace Rabota
 
         private void rus_z_Click(object sender, EventArgs e)
         {
+            List<Question> questions = db.Questions.Where(q => q.Testid == 2).ToList();
+            Random ran = new Random();
+            questions = questions.OrderBy(_ => ran.Next()).ToList();
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
+            //надо проверить есть ли тест уже или нет
+            db.Start_Tests.Add(start_Test);
+            for (int i = 0; i < questions.Count; i++)
+            {
+                Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
+                db.Start_Tests_q.Add(start_Test_Q);
+            }
+            db.SaveChanges();
             MessageBox.Show("Открытие теста по русскому");
             this.Close();
             th = new Thread(open);
@@ -64,6 +77,18 @@ namespace Rabota
 
         private void liter_Click(object sender, EventArgs e)
         {
+            List<Question> questions = db.Questions.Where(q => q.Testid == 3).ToList();
+            Random ran = new Random();
+            questions = questions.OrderBy(_ => ran.Next()).ToList();
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
+            //надо проверить есть ли тест уже или нет
+            db.Start_Tests.Add(start_Test);
+            for (int i = 0; i < questions.Count; i++)
+            {
+                Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
+                db.Start_Tests_q.Add(start_Test_Q);
+            }
+            db.SaveChanges();
             MessageBox.Show("Открытие теста по литературе");
             this.Close();
             th = new Thread(open);
@@ -73,6 +98,18 @@ namespace Rabota
 
         private void genshin_Click(object sender, EventArgs e)
         {
+            List<Question> questions = db.Questions.Where(q => q.Testid == 4).ToList();
+            Random ran = new Random();
+            questions = questions.OrderBy(_ => ran.Next()).ToList();
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
+            //надо проверить есть ли тест уже или нет
+            db.Start_Tests.Add(start_Test);
+            for (int i = 0; i < questions.Count; i++)
+            {
+                Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
+                db.Start_Tests_q.Add(start_Test_Q);
+            }
+            db.SaveChanges();
             MessageBox.Show("Открытие ГЕНШИНАААА");
             this.Close();
             th = new Thread(open);
