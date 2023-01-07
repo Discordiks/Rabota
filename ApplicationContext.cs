@@ -83,70 +83,70 @@ namespace Rabota
                    id = 1,
                    name = "С кем поцеловался Наруто?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 2,
                    name = "К какому клану принадлежит Обито?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 3,
-                   name = "Ходят слухи, что этот человек до сих пор стоит в подземелье",
+                   name = "Кого Итачи победил в подземелье?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 4,
                    name = "Кому принадлежат слова \"Я буду любить тебя всегда\"?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 5,
-                   name = "Перечислите великие техники, которые использовал клан Учих",
+                   name = "Назовите великую технику, которую смог реализовать \nМадара с помощью Обито",
                    Type_questionid = 2,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 6,
                    name = "Кто очень сильно ждал Хашираму?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 7,
-                   name = "Великие фразы Наруто?",
+                   name = "Великая фраза Наруто?",
                    Type_questionid = 2,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 8,
                    name = "Кто умер в названии серии?",
                    Type_questionid = 3,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 9,
-                   name = "Как называется техника, которая трогает сердце?",
+                   name = "Как называется знаменитая техника Какаши?",
                    Type_questionid = 3,
-                   Testid = 2,
+                   Testid = 3,
                },
                new Question
                {
                    id = 10,
                    name = "Сколько учеников в каждой команде?",
                    Type_questionid = 1,
-                   Testid = 2,
+                   Testid = 3,
                },
                //Геншин
                new Question
@@ -180,7 +180,7 @@ namespace Rabota
                new Question
                {
                    id = 15,
-                   name = "Перечислите дендро персонажей",
+                   name = "Кто является дендро персонажем?",
                    Type_questionid = 2,
                    Testid = 4,
                },
@@ -201,7 +201,7 @@ namespace Rabota
                new Question
                {
                    id = 18,
-                   name = "Кто является Предвестником Фатуи?",
+                   name = "Кто является 11-ым Предвестником Фатуи?",
                    Type_questionid = 2,
                    Testid = 4,
                },
@@ -245,7 +245,7 @@ namespace Rabota
                new Question
                {
                    id = 24,
-                   name = "Самое маленькое четырехзначное число, в записи которого цифры различны?",
+                   name = "Самое маленькое число, в записи которого цифры различны?",
                    Type_questionid = 3,
                    Testid = 1,
                },
@@ -259,7 +259,7 @@ namespace Rabota
                new Question
                {
                    id = 26,
-                   name = "Равенство, устанавливающее связь между независимой искомой величиной и известными величинами?",
+                   name = "Равенство, устанавливающее связь между независимой \nискомой величиной и известными величинами?",
                    Type_questionid = 1,
                    Testid = 1,
                },
@@ -273,7 +273,7 @@ namespace Rabota
                new Question
                {
                    id = 28,
-                   name = "На экзамене было 120 вопросов, Катя не выучила 6 из них. Найдите вероятность того, что ей попадется выученный вопрос",
+                   name = "На экзамене было 120 вопросов, Катя не выучила 6 из них.\nНайдите вероятность того, что ей попадется выученный вопрос",
                    Type_questionid = 1,
                    Testid = 1,
                },
@@ -287,10 +287,11 @@ namespace Rabota
                new Question
                {
                    id = 30,
-                   name = "Сколько трёхзначных слов можно составить из слова \"Арбуз\", где словом считается любое сочетание букв",
+                   name = "Сколько трёхзначных слов можно составить из слова\n\"Арбуз\", где словом считается любое сочетание букв",
                    Type_questionid = 3,
                    Testid = 1,
                },
+               //Русский язык
                new Question
                {
                    id = 31,
@@ -308,7 +309,7 @@ namespace Rabota
                new Question
                {
                    id = 33,
-                   name = "Сколько букв в алфавите?",
+                   name = "Сколько букв в русском алфавите?",
                    Type_questionid = 1,
                    Testid = 2,
                },
@@ -322,21 +323,21 @@ namespace Rabota
                new Question
                {
                    id = 35,
-                   name = "Почему?",
+                   name = "Популярная олимпиада по русскому языку",
                    Type_questionid = 3,
                    Testid = 2,
                },
                new Question
                {
                    id = 36,
-                   name = "Что из перечисленного не обосабливается?",
+                   name = "Что из перечисленного не обосабливается с двух сторон?",
                    Type_questionid = 2,
                    Testid = 2,
                },
                new Question
                {
                    id = 37,
-                   name = "Вставьте пропущенное слово: \"Я пошёл гулять, но ... и упал\"",
+                   name = "Вставьте пропущенное слово:\n\"Я пошёл гулять, но ... и упал\"",
                    Type_questionid = 1,
                    Testid = 2,
                },
@@ -459,21 +460,21 @@ namespace Rabota
                    id = 13,
                    name = "Шаринган",
                    Questionid = 5,
-                   vernost = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 14,
-                   name = "Рассенган",
+                   name = "Вечное Цукуёми",
                    Questionid = 5,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 15,
                    name = "Сусано",
                    Questionid = 5,
-                   vernost = 1,
+                   vernost = 0,
                },
                //6
                new Answer
@@ -515,9 +516,9 @@ namespace Rabota
                new Answer
                {
                    id = 21,
-                   name = "Это мой путь ниндзя!",
+                   name = "Ничего непонятно, но умный вид сделать надо!",
                    Questionid = 7,
-                   vernost = 1,
+                   vernost = 0,
                },
                //8
                new Answer
@@ -684,16 +685,16 @@ namespace Rabota
                new Answer
                {
                    id = 44,
-                   name = "Коллеи",
+                   name = "Дэхья",
                    Questionid = 15,
-                   vernost = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 45,
-                   name = "Аль-Хайтам",
+                   name = "Сайно",
                    Questionid = 15,
-                   vernost = 1,
+                   vernost = 0,
                },
                //16
                new Answer
@@ -746,7 +747,7 @@ namespace Rabota
                    id = 52,
                    name = "Дотторе",
                    Questionid = 18,
-                   vernost = 1,
+                   vernost = 0,
                },
                new Answer
                {
@@ -942,21 +943,21 @@ namespace Rabota
                new Answer
                {
                    id = 79,
-                   name = "Сакура",
+                   name = "Числа, которое можно представить в виде обыкновенной дроби",
                    Questionid = 27,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 80,
-                   name = "Сакура",
+                   name = "Целые числа",
                    Questionid = 27,
                    vernost = 0,
                },
                new Answer
                {
                    id = 81,
-                   name = "Сакура",
+                   name = "Числа, которые делятся на 2",
                    Questionid = 27,
                    vernost = 0,
                },
@@ -964,21 +965,21 @@ namespace Rabota
                new Answer
                {
                    id = 82,
-                   name = "Сакура",
+                   name = "0,95",
                    Questionid = 28,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 83,
-                   name = "Сакура",
+                   name = "0,05",
                    Questionid = 28,
                    vernost = 0,
                },
                new Answer
                {
                    id = 84,
-                   name = "Сакура",
+                   name = "0,053",
                    Questionid = 28,
                    vernost = 0,
                },
@@ -986,21 +987,21 @@ namespace Rabota
                new Answer
                {
                    id = 85,
-                   name = "Сакура",
+                   name = "Теорема Коши",
                    Questionid = 29,
                    vernost = 0,
                },
                new Answer
                {
                    id = 86,
-                   name = "Сакура",
+                   name = "Теорема Виетта",
                    Questionid = 29,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 87,
-                   name = "Сакура",
+                   name = "Теорема Пифагора",
                    Questionid = 29,
                    vernost = 0,
                },
@@ -1008,65 +1009,65 @@ namespace Rabota
                new Answer
                {
                    id = 88,
-                   name = "Сакура",
+                   name = "25",
                    Questionid = 30,
                    vernost = 0,
                },
                new Answer
                {
                    id = 89,
-                   name = "Сакура",
+                   name = "120",
                    Questionid = 30,
                    vernost = 0,
                },
                new Answer
                {
                    id = 90,
-                   name = "Сакура",
+                   name = "60",
                    Questionid = 30,
-                   vernost = 0,
+                   vernost = 1,
                },
                //31
                new Answer
                {
                    id = 91,
-                   name = "Сакура",
+                   name = "Да",
                    Questionid = 31,
                    vernost = 0,
                },
                new Answer
                {
                    id = 92,
-                   name = "Сакура",
+                   name = "Же",
                    Questionid = 31,
                    vernost = 0,
                },
                new Answer
                {
                    id = 93,
-                   name = "Сакура",
+                   name = "То",
                    Questionid = 31,
-                   vernost = 0,
+                   vernost = 1,
                },
                //32
                new Answer
                {
                    id = 94,
-                   name = "Сакура",
+                   name = "Что это?",
                    Questionid = 32,
                    vernost = 0,
                },
                new Answer
                {
                    id = 95,
-                   name = "Сакура",
+                   name = "Да",
                    Questionid = 32,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 96,
-                   name = "Сакура",
+                   name = "Нет",
                    Questionid = 32,
                    vernost = 0,
                },
@@ -1074,43 +1075,43 @@ namespace Rabota
                new Answer
                {
                    id = 97,
-                   name = "Сакура",
+                   name = "30",
                    Questionid = 33,
                    vernost = 0,
                },
                new Answer
                {
                    id = 98,
-                   name = "Сакура",
+                   name = "28",
                    Questionid = 33,
                    vernost = 0,
                },
                new Answer
                {
                    id = 99,
-                   name = "Сакура",
+                   name = "33",
                    Questionid = 33,
-                   vernost = 0,
+                   vernost = 1,
                },
                //34
                new Answer
                {
                    id = 100,
-                   name = "Сакура",
+                   name = "жАлюзи",
                    Questionid = 34,
                    vernost = 0,
                },
                new Answer
                {
                    id = 101,
-                   name = "Сакура",
+                   name = "кровоточАщий",
                    Questionid = 34,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 102,
-                   name = "Сакура",
+                   name = "дЕньгами",
                    Questionid = 34,
                    vernost = 0,
                },
@@ -1118,21 +1119,21 @@ namespace Rabota
                new Answer
                {
                    id = 103,
-                   name = "Сакура",
+                   name = "Русский медвежонок",
                    Questionid = 35,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 104,
-                   name = "Сакура",
+                   name = "Русский соболь",
                    Questionid = 35,
                    vernost = 0,
                },
                new Answer
                {
                    id = 105,
-                   name = "Сакура",
+                   name = "Русский кролик",
                    Questionid = 35,
                    vernost = 0,
                },
@@ -1140,21 +1141,21 @@ namespace Rabota
                new Answer
                {
                    id = 106,
-                   name = "Сакура",
+                   name = "Деепричастный оборот",
                    Questionid = 36,
                    vernost = 0,
                },
                new Answer
                {
                    id = 107,
-                   name = "Сакура",
+                   name = "Обобщающее слово",
                    Questionid = 36,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 108,
-                   name = "Сакура",
+                   name = "Обращение",
                    Questionid = 36,
                    vernost = 0,
                },
@@ -1162,21 +1163,21 @@ namespace Rabota
                new Answer
                {
                    id = 109,
-                   name = "Сакура",
+                   name = "Подскользнулся",
                    Questionid = 37,
                    vernost = 0,
                },
                new Answer
                {
                    id = 110,
-                   name = "Сакура",
+                   name = "Поскользнулся",
                    Questionid = 37,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 111,
-                   name = "Сакура",
+                   name = "Подскальзнулся",
                    Questionid = 37,
                    vernost = 0,
                },
@@ -1184,21 +1185,21 @@ namespace Rabota
                new Answer
                {
                    id = 112,
-                   name = "Сакура",
+                   name = "Серо-зелёный",
                    Questionid = 38,
-                   vernost = 0,
+                   vernost = 1,
                },
                new Answer
                {
                    id = 113,
-                   name = "Сакура",
+                   name = "Серо зелёный",
                    Questionid = 38,
                    vernost = 0,
                },
                new Answer
                {
                    id = 114,
-                   name = "Сакура",
+                   name = "Серозелёный",
                    Questionid = 38,
                    vernost = 0,
                },
@@ -1206,45 +1207,45 @@ namespace Rabota
                new Answer
                {
                    id = 115,
-                   name = "Сакура",
+                   name = "Да, иначе никак",
                    Questionid = 39,
                    vernost = 0,
                },
                new Answer
                {
                    id = 116,
-                   name = "Сакура",
+                   name = "Необязательно",
                    Questionid = 39,
                    vernost = 0,
                },
                new Answer
                {
                    id = 117,
-                   name = "Сакура",
+                   name = "Я русский!",
                    Questionid = 39,
-                   vernost = 0,
+                   vernost = 1,
                },
                //40
                new Answer
                {
                    id = 118,
-                   name = "Сакура",
+                   name = "Деепричастного",
                    Questionid = 40,
                    vernost = 0,
                },
                new Answer
                {
                    id = 119,
-                   name = "Сакура",
+                   name = "Причастного",
                    Questionid = 40,
                    vernost = 0,
                },
                new Answer
                {
                    id = 120,
-                   name = "Сакура",
+                   name = "Частного",
                    Questionid = 40,
-                   vernost = 0,
+                   vernost = 1,
                });
 
            

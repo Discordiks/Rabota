@@ -52,12 +52,9 @@ namespace Rabota
 
 
             }
-            catch //(Exception ef)
+            catch
             {
-                //ef.Data.Add("user", Thread.CurrentPrincipal.Identity.Name);
-               
                 MessageBox.Show("Введите дату");
-                
             }
             
         }

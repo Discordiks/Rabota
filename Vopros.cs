@@ -39,24 +39,6 @@ namespace Rabota
             dataGridView2.DataSource = db.Answers.Local.ToBindingList();
 
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Purple;
-
-            //if (tabControl1.SelectedTab == tabPage1)
-            //{
-            //    nameq.Visible = true;
-            //    combotestq.Visible = true;
-            //    combotypeq.Visible = true;
-            //    namean.Visible = false;
-            //    comboquestan.Visible = false;
-
-            //}
-            //else if (tabControl1.SelectedTab == tabPage2)
-            //{
-            //    nameq.Visible = false;
-            //    combotestq.Visible = false;
-            //    combotypeq.Visible = false;
-            //    namean.Visible = true;
-            //    comboquestan.Visible = true;
-            //}
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -107,8 +89,6 @@ namespace Rabota
                 var answers = db.Answers.ToList();
             }
         }
-
-
         private void create_Click(object sender, EventArgs e)
         {
             // Добавление в "Школьники"
@@ -131,7 +111,6 @@ namespace Rabota
                 MessageBox.Show("Данные добавлены успешно");
                 ClearData2();
             }
-            
         }
         private void ClearData1()
         {

@@ -12,6 +12,8 @@ namespace Rabota.Entity
     {
         public int id { get; set; }
         public int UserId { get; set; }
+        
+        public int resultat { get; set; }
         public User user { get; set; }
         public List<Start_test_q> Start_test_qs { get; set; } = new List<Start_test_q>();
 

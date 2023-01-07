@@ -36,7 +36,7 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id}; // создание 
+            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id, resultat = 0}; // создание 
            //надо проверить есть ли тест уже или нет
             db.Start_Tests.Add(start_Test);
             for (int i = 0; i < questions.Count; i++)
@@ -59,8 +59,8 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 2).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
-            //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
+                                                                                     //надо проверить есть ли тест уже или нет
             db.Start_Tests.Add(start_Test);
             for (int i = 0; i < questions.Count; i++)
             {
@@ -68,7 +68,8 @@ namespace Rabota
                 db.Start_Tests_q.Add(start_Test_Q);
             }
             db.SaveChanges();
-            MessageBox.Show("Открытие теста по русскому");
+            User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
+            MessageBox.Show("Открытие теста по русскому языку");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -80,8 +81,8 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 3).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
-            //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
+                                                                                     //надо проверить есть ли тест уже или нет
             db.Start_Tests.Add(start_Test);
             for (int i = 0; i < questions.Count; i++)
             {
@@ -89,7 +90,8 @@ namespace Rabota
                 db.Start_Tests_q.Add(start_Test_Q);
             }
             db.SaveChanges();
-            MessageBox.Show("Открытие теста по литературе");
+            User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
+            MessageBox.Show("Открытие теста по Наруто");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -101,8 +103,8 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 4).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id };
-            //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
+                                                                                     //надо проверить есть ли тест уже или нет
             db.Start_Tests.Add(start_Test);
             for (int i = 0; i < questions.Count; i++)
             {
@@ -110,7 +112,8 @@ namespace Rabota
                 db.Start_Tests_q.Add(start_Test_Q);
             }
             db.SaveChanges();
-            MessageBox.Show("Открытие ГЕНШИНАААА");
+            User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
+            MessageBox.Show("Открытие теста по Геншину");
             this.Close();
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -122,22 +125,22 @@ namespace Rabota
             DialogResult resulttt = MessageBox.Show("Уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo);
             if (resulttt == DialogResult.Yes)
             {
-                
                 this.Close();
                 th = new Thread(open1);
                 th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
                 th.Start();
-
             }
-                
             this.TopMost = true; //открытие формы "самой верхней формой"
-
-
         }
 
         private void Students_acc_Load(object sender, EventArgs e)
         {
             fio.Text = User_info.user_ima;
+        }
+
+        private void procent_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Математика:"+ a +"\nРусский:" + b + "\nНаруто:" + c + "\nГеншин:" + d);
         }
     }
 }
