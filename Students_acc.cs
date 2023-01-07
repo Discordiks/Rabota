@@ -36,9 +36,10 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id, resultat = 0}; // создание 
-           //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id, resultat = 0}; // создание
             db.Start_Tests.Add(start_Test);
+            questions.RemoveAt(1);
+            questions.RemoveAt(2);
             for (int i = 0; i < questions.Count; i++)
             {
                 Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
@@ -59,9 +60,10 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 2).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
-                                                                                     //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание
             db.Start_Tests.Add(start_Test);
+            questions.RemoveAt(1);
+            questions.RemoveAt(2);
             for (int i = 0; i < questions.Count; i++)
             {
                 Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
@@ -81,9 +83,10 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 3).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
-                                                                                     //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание
             db.Start_Tests.Add(start_Test);
+            questions.RemoveAt(1);
+            questions.RemoveAt(2);
             for (int i = 0; i < questions.Count; i++)
             {
                 Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
@@ -103,9 +106,10 @@ namespace Rabota
             List<Question> questions = db.Questions.Where(q => q.Testid == 4).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание 
-                                                                                     //надо проверить есть ли тест уже или нет
+            Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание
             db.Start_Tests.Add(start_Test);
+            questions.RemoveAt(1);
+            questions.RemoveAt(2);
             for (int i = 0; i < questions.Count; i++)
             {
                 Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
@@ -140,7 +144,24 @@ namespace Rabota
 
         private void procent_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("Математика:"+ a +"\nРусский:" + b + "\nНаруто:" + c + "\nГеншин:" + d);
+            int a, b, c, d ;
+            List<Start_test> start_Tests = db.Start_Tests.Include(st => st.Start_test_qs)
+                .ThenInclude(stq => stq.question).Where(st => st.UserId == User_info.user_id)
+                .OrderByDescending(o => o.id).ToList();
+            a = CheckTest(1, start_Tests);
+            b = CheckTest(2, start_Tests);
+            c = CheckTest(3, start_Tests);
+            d = CheckTest(4, start_Tests);
+            MessageBox.Show("Математика:"+ a +"\nРусский:" + b + "\nНаруто:" + c + "\nГеншин:" + d);
+        }
+        private int CheckTest(int testId, List<Start_test> start_Tests)
+        {
+            Start_test ad = start_Tests.Find(st => st.Start_test_qs[0].question.Testid == testId);
+            if (ad == null)
+            {
+                return 0;
+            }
+            return ad.resultat;
         }
     }
 }
