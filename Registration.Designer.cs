@@ -49,7 +49,7 @@ namespace Rabota
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(789, 473);
+            this.label1.Location = new System.Drawing.Point(709, 464);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 36);
@@ -60,7 +60,7 @@ namespace Rabota
             // 
             this.Pochta.AutoSize = true;
             this.Pochta.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pochta.Location = new System.Drawing.Point(789, 373);
+            this.Pochta.Location = new System.Drawing.Point(709, 364);
             this.Pochta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Pochta.Name = "Pochta";
             this.Pochta.Size = new System.Drawing.Size(212, 36);
@@ -71,7 +71,7 @@ namespace Rabota
             // 
             this.RegEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.RegEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegEmail.Location = new System.Drawing.Point(790, 413);
+            this.RegEmail.Location = new System.Drawing.Point(710, 404);
             this.RegEmail.Margin = new System.Windows.Forms.Padding(4);
             this.RegEmail.Name = "RegEmail";
             this.RegEmail.Size = new System.Drawing.Size(347, 42);
@@ -83,7 +83,7 @@ namespace Rabota
             this.Reg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Reg.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reg.Location = new System.Drawing.Point(523, 632);
+            this.Reg.Location = new System.Drawing.Point(443, 623);
             this.Reg.Margin = new System.Windows.Forms.Padding(4);
             this.Reg.Name = "Reg";
             this.Reg.Size = new System.Drawing.Size(413, 45);
@@ -96,7 +96,7 @@ namespace Rabota
             // 
             this.RegPas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.RegPas.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegPas.Location = new System.Drawing.Point(790, 513);
+            this.RegPas.Location = new System.Drawing.Point(710, 504);
             this.RegPas.Margin = new System.Windows.Forms.Padding(4);
             this.RegPas.Name = "RegPas";
             this.RegPas.PasswordChar = '*';
@@ -107,7 +107,7 @@ namespace Rabota
             // 
             this.faml.AutoSize = true;
             this.faml.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.faml.Location = new System.Drawing.Point(315, 274);
+            this.faml.Location = new System.Drawing.Point(235, 265);
             this.faml.Name = "faml";
             this.faml.Size = new System.Drawing.Size(158, 36);
             this.faml.TabIndex = 10;
@@ -117,7 +117,7 @@ namespace Rabota
             // 
             this.imal.AutoSize = true;
             this.imal.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imal.Location = new System.Drawing.Point(315, 373);
+            this.imal.Location = new System.Drawing.Point(235, 364);
             this.imal.Name = "imal";
             this.imal.Size = new System.Drawing.Size(79, 36);
             this.imal.TabIndex = 11;
@@ -127,7 +127,7 @@ namespace Rabota
             // 
             this.otchl.AutoSize = true;
             this.otchl.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otchl.Location = new System.Drawing.Point(313, 473);
+            this.otchl.Location = new System.Drawing.Point(233, 464);
             this.otchl.Name = "otchl";
             this.otchl.Size = new System.Drawing.Size(150, 36);
             this.otchl.TabIndex = 12;
@@ -137,7 +137,7 @@ namespace Rabota
             // 
             this.datahbl.AutoSize = true;
             this.datahbl.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datahbl.Location = new System.Drawing.Point(789, 274);
+            this.datahbl.Location = new System.Drawing.Point(709, 265);
             this.datahbl.Name = "datahbl";
             this.datahbl.Size = new System.Drawing.Size(246, 36);
             this.datahbl.TabIndex = 13;
@@ -147,7 +147,7 @@ namespace Rabota
             // 
             this.Regfam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Regfam.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regfam.Location = new System.Drawing.Point(319, 314);
+            this.Regfam.Location = new System.Drawing.Point(239, 305);
             this.Regfam.Margin = new System.Windows.Forms.Padding(4);
             this.Regfam.Name = "Regfam";
             this.Regfam.Size = new System.Drawing.Size(347, 42);
@@ -157,7 +157,7 @@ namespace Rabota
             // 
             this.Regima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Regima.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regima.Location = new System.Drawing.Point(319, 413);
+            this.Regima.Location = new System.Drawing.Point(239, 404);
             this.Regima.Margin = new System.Windows.Forms.Padding(4);
             this.Regima.Name = "Regima";
             this.Regima.Size = new System.Drawing.Size(347, 42);
@@ -167,7 +167,7 @@ namespace Rabota
             // 
             this.Regotch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Regotch.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regotch.Location = new System.Drawing.Point(319, 513);
+            this.Regotch.Location = new System.Drawing.Point(239, 504);
             this.Regotch.Margin = new System.Windows.Forms.Padding(4);
             this.Regotch.Name = "Regotch";
             this.Regotch.Size = new System.Drawing.Size(347, 42);
@@ -177,7 +177,7 @@ namespace Rabota
             // 
             this.Regdatahb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Regdatahb.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regdatahb.Location = new System.Drawing.Point(790, 314);
+            this.Regdatahb.Location = new System.Drawing.Point(710, 305);
             this.Regdatahb.Margin = new System.Windows.Forms.Padding(4);
             this.Regdatahb.Name = "Regdatahb";
             this.Regdatahb.Size = new System.Drawing.Size(352, 42);
@@ -187,7 +187,7 @@ namespace Rabota
             // 
             this.Regl.AutoSize = true;
             this.Regl.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Regl.Location = new System.Drawing.Point(509, 163);
+            this.Regl.Location = new System.Drawing.Point(429, 154);
             this.Regl.Name = "Regl";
             this.Regl.Size = new System.Drawing.Size(427, 80);
             this.Regl.TabIndex = 18;
@@ -198,7 +198,7 @@ namespace Rabota
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.ClientSize = new System.Drawing.Size(1221, 777);
             this.Controls.Add(this.Regl);
             this.Controls.Add(this.Regdatahb);
             this.Controls.Add(this.Regotch);

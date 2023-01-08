@@ -22,6 +22,7 @@ namespace Rabota
         ApplicationContext db = new ApplicationContext();
         int ID1 = 0;
         int ID2 = 0;
+        Thread th;
 
         public Vopros()
         {
@@ -190,5 +191,22 @@ namespace Rabota
 
         }
 
+        private void exit_Click(object sender, EventArgs e)
+        {
+            DialogResult resulttt = MessageBox.Show("Вернуться на главный экран?", "Выход", MessageBoxButtons.YesNo);
+            if (resulttt == DialogResult.Yes)
+            {
+
+                this.Close();
+                th = new Thread(open);
+                th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                th.Start();
+
+            }
+        }
+        private void open(object obj)
+        {
+            Application.Run(new Teachers_acc());
+        }
     }
 }

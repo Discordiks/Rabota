@@ -61,7 +61,7 @@ namespace Rabota
 
         private void Teachers_acc_Load(object sender, EventArgs e)
         {
-            fio.Text = User_info.user_ima;
+            fio.Text = "Добро\nпожаловать," + User_info.user_ima;
         }
     }
 }

@@ -117,14 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="anime-anime-boys-Anime-screenshot-JoJo's-Bizarre-Adventure-Stardust-Crusaders-Noriaki-Kakyoin-redhead-artwork-digital-art-2086071" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anime-anime-boys-Anime-screenshot-JoJo's-Bizarre-Adventure-Stardust-Crusaders-Noriaki-Kakyoin-redhead-artwork-digital-art-20860711.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Syntonyme_sonic_x_man_421ead69-e225-4228-998a-2781a48b377c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Syntonyme_sonic_x_man_421ead69-e225-4228-998a-2781a48b377c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="п" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\п.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="starttestBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

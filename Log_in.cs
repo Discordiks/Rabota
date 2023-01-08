@@ -36,10 +36,9 @@ namespace Rabota
             {
                 User_info.user_id = user.id;
                 User_info.user_ima = user.ima;
-                if (outemail.Text ==  "е@mail.ru")
+                if (outemail.Text ==  "Admin")
                 {
                     MessageBox.Show("Всё верно, вы учитель, проходите");
-
                     this.Close();
                     th = new Thread(open_teacher_acc);
                     th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -49,7 +48,6 @@ namespace Rabota
                 else
                 {
                     MessageBox.Show("Всё верно, вы школьник, проходите");
-
                     this.Close();
                     th = new Thread(open_student_acc);
                     th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -58,7 +56,6 @@ namespace Rabota
                 }
             }
             MessageBox.Show("Пароль введён неправильно");
-            
         }
 
         private void sozdatakk_Click(object sender, EventArgs e)

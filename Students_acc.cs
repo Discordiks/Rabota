@@ -139,7 +139,7 @@ namespace Rabota
 
         private void Students_acc_Load(object sender, EventArgs e)
         {
-            fio.Text = User_info.user_ima;
+            fio.Text = "Добро\nпожаловать,\n" + User_info.user_ima;
         }
 
         private void procent_Click(object sender, EventArgs e)

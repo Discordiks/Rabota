@@ -54,19 +54,19 @@ namespace Rabota
             this.voprosl.AutoSize = true;
             this.voprosl.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voprosl.ForeColor = System.Drawing.Color.Black;
-            this.voprosl.Location = new System.Drawing.Point(1051, 57);
+            this.voprosl.Location = new System.Drawing.Point(856, 77);
             this.voprosl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.voprosl.Name = "voprosl";
-            this.voprosl.Size = new System.Drawing.Size(126, 34);
+            this.voprosl.Size = new System.Drawing.Size(310, 34);
             this.voprosl.TabIndex = 0;
-            this.voprosl.Text = "Вопросы";
+            this.voprosl.Text = "Управление вопросами";
             // 
             // vopros1
             // 
             this.vopros1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros1.Location = new System.Drawing.Point(1029, 114);
+            this.vopros1.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros1.Location = new System.Drawing.Point(925, 146);
             this.vopros1.Margin = new System.Windows.Forms.Padding(4);
             this.vopros1.Name = "vopros1";
             this.vopros1.Size = new System.Drawing.Size(53, 53);
@@ -79,8 +79,8 @@ namespace Rabota
             // 
             this.vopros2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros2.Location = new System.Drawing.Point(1133, 114);
+            this.vopros2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros2.Location = new System.Drawing.Point(1029, 146);
             this.vopros2.Margin = new System.Windows.Forms.Padding(4);
             this.vopros2.Name = "vopros2";
             this.vopros2.Size = new System.Drawing.Size(53, 53);
@@ -93,8 +93,8 @@ namespace Rabota
             // 
             this.vopros3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros3.Location = new System.Drawing.Point(1029, 180);
+            this.vopros3.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros3.Location = new System.Drawing.Point(925, 212);
             this.vopros3.Margin = new System.Windows.Forms.Padding(4);
             this.vopros3.Name = "vopros3";
             this.vopros3.Size = new System.Drawing.Size(53, 53);
@@ -107,8 +107,8 @@ namespace Rabota
             // 
             this.vopros4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros4.Location = new System.Drawing.Point(1133, 180);
+            this.vopros4.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros4.Location = new System.Drawing.Point(1029, 212);
             this.vopros4.Margin = new System.Windows.Forms.Padding(4);
             this.vopros4.Name = "vopros4";
             this.vopros4.Size = new System.Drawing.Size(53, 53);
@@ -121,8 +121,8 @@ namespace Rabota
             // 
             this.vopros5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros5.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros5.Location = new System.Drawing.Point(1029, 251);
+            this.vopros5.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros5.Location = new System.Drawing.Point(925, 283);
             this.vopros5.Margin = new System.Windows.Forms.Padding(4);
             this.vopros5.Name = "vopros5";
             this.vopros5.Size = new System.Drawing.Size(53, 53);
@@ -135,8 +135,8 @@ namespace Rabota
             // 
             this.vopros6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros6.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros6.Location = new System.Drawing.Point(1133, 251);
+            this.vopros6.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros6.Location = new System.Drawing.Point(1029, 283);
             this.vopros6.Margin = new System.Windows.Forms.Padding(4);
             this.vopros6.Name = "vopros6";
             this.vopros6.Size = new System.Drawing.Size(53, 53);
@@ -149,8 +149,8 @@ namespace Rabota
             // 
             this.vopros7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros7.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros7.Location = new System.Drawing.Point(1029, 313);
+            this.vopros7.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros7.Location = new System.Drawing.Point(925, 345);
             this.vopros7.Margin = new System.Windows.Forms.Padding(4);
             this.vopros7.Name = "vopros7";
             this.vopros7.Size = new System.Drawing.Size(53, 53);
@@ -163,8 +163,8 @@ namespace Rabota
             // 
             this.vopros8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.vopros8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vopros8.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vopros8.Location = new System.Drawing.Point(1133, 313);
+            this.vopros8.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vopros8.Location = new System.Drawing.Point(1029, 345);
             this.vopros8.Margin = new System.Windows.Forms.Padding(4);
             this.vopros8.Name = "vopros8";
             this.vopros8.Size = new System.Drawing.Size(53, 53);
@@ -178,7 +178,7 @@ namespace Rabota
             this.sledvopros.BackColor = System.Drawing.Color.Lime;
             this.sledvopros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sledvopros.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sledvopros.Location = new System.Drawing.Point(981, 391);
+            this.sledvopros.Location = new System.Drawing.Point(887, 442);
             this.sledvopros.Margin = new System.Windows.Forms.Padding(4);
             this.sledvopros.Name = "sledvopros";
             this.sledvopros.Size = new System.Drawing.Size(252, 92);
@@ -189,10 +189,10 @@ namespace Rabota
             // 
             // zakonchit
             // 
-            this.zakonchit.BackColor = System.Drawing.Color.Lime;
+            this.zakonchit.BackColor = System.Drawing.Color.LimeGreen;
             this.zakonchit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.zakonchit.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zakonchit.Location = new System.Drawing.Point(981, 505);
+            this.zakonchit.Location = new System.Drawing.Point(887, 556);
             this.zakonchit.Margin = new System.Windows.Forms.Padding(4);
             this.zakonchit.Name = "zakonchit";
             this.zakonchit.Size = new System.Drawing.Size(252, 46);
@@ -205,7 +205,7 @@ namespace Rabota
             // 
             this.textv1.AutoSize = true;
             this.textv1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textv1.Location = new System.Drawing.Point(44, 57);
+            this.textv1.Location = new System.Drawing.Point(57, 77);
             this.textv1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.textv1.Name = "textv1";
             this.textv1.Size = new System.Drawing.Size(30, 34);
@@ -215,10 +215,12 @@ namespace Rabota
             // otvet1
             // 
             this.otvet1.AutoSize = true;
-            this.otvet1.Location = new System.Drawing.Point(63, 345);
+            this.otvet1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.otvet1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otvet1.Location = new System.Drawing.Point(83, 345);
             this.otvet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.otvet1.Name = "otvet1";
-            this.otvet1.Size = new System.Drawing.Size(110, 21);
+            this.otvet1.Size = new System.Drawing.Size(170, 33);
             this.otvet1.TabIndex = 22;
             this.otvet1.Text = "radioButton1";
             this.otvet1.UseVisualStyleBackColor = true;
@@ -226,10 +228,12 @@ namespace Rabota
             // otvet2
             // 
             this.otvet2.AutoSize = true;
-            this.otvet2.Location = new System.Drawing.Point(63, 386);
+            this.otvet2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.otvet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otvet2.Location = new System.Drawing.Point(83, 421);
             this.otvet2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.otvet2.Name = "otvet2";
-            this.otvet2.Size = new System.Drawing.Size(110, 21);
+            this.otvet2.Size = new System.Drawing.Size(170, 33);
             this.otvet2.TabIndex = 23;
             this.otvet2.Text = "radioButton2";
             this.otvet2.UseVisualStyleBackColor = true;
@@ -237,10 +241,12 @@ namespace Rabota
             // otvet3
             // 
             this.otvet3.AutoSize = true;
-            this.otvet3.Location = new System.Drawing.Point(63, 430);
+            this.otvet3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.otvet3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otvet3.Location = new System.Drawing.Point(83, 492);
             this.otvet3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.otvet3.Name = "otvet3";
-            this.otvet3.Size = new System.Drawing.Size(110, 21);
+            this.otvet3.Size = new System.Drawing.Size(170, 33);
             this.otvet3.TabIndex = 24;
             this.otvet3.Text = "radioButton3";
             this.otvet3.UseVisualStyleBackColor = true;
@@ -254,7 +260,7 @@ namespace Rabota
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1284, 977);
+            this.ClientSize = new System.Drawing.Size(1221, 777);
             this.Controls.Add(this.otvet3);
             this.Controls.Add(this.otvet2);
             this.Controls.Add(this.otvet1);
@@ -273,7 +279,7 @@ namespace Rabota
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Test_window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "Тест";
             this.Load += new System.EventHandler(this.Test_window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource)).EndInit();
             this.ResumeLayout(false);

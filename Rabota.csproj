@@ -245,6 +245,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Rabota.Entity.Answer.datasource" />
@@ -263,6 +264,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anime-anime-boys-Anime-screenshot-JoJo%27s-Bizarre-Adventure-Stardust-Crusaders-Noriaki-Kakyoin-redhead-artwork-digital-art-20860711.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syntonyme_sonic_x_man_421ead69-e225-4228-998a-2781a48b377c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\п.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />

@@ -51,6 +51,7 @@ namespace Rabota
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.questionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -91,7 +92,7 @@ namespace Rabota
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1270, 494);
+            this.dataGridView1.Size = new System.Drawing.Size(1407, 494);
             this.dataGridView1.TabIndex = 0;
             // 
             // Type_Question_name
@@ -119,7 +120,7 @@ namespace Rabota
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1284, 527);
+            this.tabControl1.Size = new System.Drawing.Size(1421, 527);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -130,7 +131,7 @@ namespace Rabota
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1276, 498);
+            this.tabPage1.Size = new System.Drawing.Size(1413, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Вопросы";
             // 
@@ -142,7 +143,7 @@ namespace Rabota
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1276, 498);
+            this.tabPage2.Size = new System.Drawing.Size(1413, 498);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ответы";
             // 
@@ -161,20 +162,21 @@ namespace Rabota
             this.dataGridView2.DataSource = this.answerBindingSource;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 2);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1270, 494);
+            this.dataGridView2.Size = new System.Drawing.Size(1407, 494);
             this.dataGridView2.TabIndex = 0;
             // 
             // delete
             // 
             this.delete.BackColor = System.Drawing.Color.Lime;
+            this.delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delete.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.Location = new System.Drawing.Point(15, 812);
+            this.delete.Location = new System.Drawing.Point(7, 693);
             this.delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(397, 66);
+            this.delete.Size = new System.Drawing.Size(404, 66);
             this.delete.TabIndex = 2;
             this.delete.Text = "Удалить";
             this.delete.UseVisualStyleBackColor = false;
@@ -183,8 +185,9 @@ namespace Rabota
             // create
             // 
             this.create.BackColor = System.Drawing.Color.Lime;
+            this.create.Cursor = System.Windows.Forms.Cursors.Hand;
             this.create.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create.Location = new System.Drawing.Point(435, 812);
+            this.create.Location = new System.Drawing.Point(498, 812);
             this.create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.create.Name = "create";
             this.create.Size = new System.Drawing.Size(397, 66);
@@ -196,8 +199,9 @@ namespace Rabota
             // change
             // 
             this.change.BackColor = System.Drawing.Color.Lime;
+            this.change.Cursor = System.Windows.Forms.Cursors.Hand;
             this.change.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.change.Location = new System.Drawing.Point(857, 812);
+            this.change.Location = new System.Drawing.Point(970, 812);
             this.change.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.change.Name = "change";
             this.change.Size = new System.Drawing.Size(397, 66);
@@ -218,8 +222,8 @@ namespace Rabota
             // combotypeq
             // 
             this.combotypeq.FormattingEnabled = true;
-            this.combotypeq.Location = new System.Drawing.Point(435, 666);
-            this.combotypeq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combotypeq.Location = new System.Drawing.Point(498, 666);
+            this.combotypeq.Margin = new System.Windows.Forms.Padding(4);
             this.combotypeq.Name = "combotypeq";
             this.combotypeq.Size = new System.Drawing.Size(396, 24);
             this.combotypeq.TabIndex = 14;
@@ -228,8 +232,8 @@ namespace Rabota
             // combotestq
             // 
             this.combotestq.FormattingEnabled = true;
-            this.combotestq.Location = new System.Drawing.Point(435, 748);
-            this.combotestq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combotestq.Location = new System.Drawing.Point(498, 748);
+            this.combotestq.Margin = new System.Windows.Forms.Padding(4);
             this.combotestq.Name = "combotestq";
             this.combotestq.Size = new System.Drawing.Size(396, 24);
             this.combotestq.TabIndex = 15;
@@ -237,7 +241,7 @@ namespace Rabota
             // 
             // nameq
             // 
-            this.nameq.Location = new System.Drawing.Point(435, 618);
+            this.nameq.Location = new System.Drawing.Point(498, 618);
             this.nameq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameq.Name = "nameq";
             this.nameq.Size = new System.Drawing.Size(396, 22);
@@ -262,7 +266,7 @@ namespace Rabota
             // 
             // namean
             // 
-            this.namean.Location = new System.Drawing.Point(857, 618);
+            this.namean.Location = new System.Drawing.Point(970, 618);
             this.namean.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.namean.Name = "namean";
             this.namean.Size = new System.Drawing.Size(396, 22);
@@ -272,8 +276,8 @@ namespace Rabota
             // comboquestan
             // 
             this.comboquestan.FormattingEnabled = true;
-            this.comboquestan.Location = new System.Drawing.Point(857, 666);
-            this.comboquestan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboquestan.Location = new System.Drawing.Point(970, 666);
+            this.comboquestan.Margin = new System.Windows.Forms.Padding(4);
             this.comboquestan.Name = "comboquestan";
             this.comboquestan.Size = new System.Drawing.Size(396, 24);
             this.comboquestan.TabIndex = 17;
@@ -283,18 +287,18 @@ namespace Rabota
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(548, 555);
+            this.label1.Location = new System.Drawing.Point(611, 555);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 31);
+            this.label1.Size = new System.Drawing.Size(120, 31);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Школьники";
+            this.label1.Text = "Вопросы";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(1000, 555);
+            this.label2.Location = new System.Drawing.Point(1113, 555);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 31);
@@ -308,9 +312,23 @@ namespace Rabota
             this.label3.Location = new System.Drawing.Point(69, 555);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 31);
+            this.label3.Size = new System.Drawing.Size(219, 31);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Школьники/Ответы";
+            this.label3.Text = "Вопросы/Ответы";
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.LimeGreen;
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Location = new System.Drawing.Point(7, 812);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(404, 66);
+            this.exit.TabIndex = 21;
+            this.exit.Text = "Вернуться обратно";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -371,7 +389,8 @@ namespace Rabota
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1284, 977);
+            this.ClientSize = new System.Drawing.Size(1421, 977);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -435,5 +454,6 @@ namespace Rabota
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button exit;
     }
 }

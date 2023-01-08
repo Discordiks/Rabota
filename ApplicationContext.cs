@@ -102,14 +102,14 @@ namespace Rabota
                new Question
                {
                    id = 4,
-                   name = "Кому принадлежат слова \"Я буду любить тебя всегда\"?",
+                   name = "Кому принадлежат слова\n\"Я буду любить тебя всегда\"?",
                    Type_questionid = 1,
                    Testid = 3,
                },
                new Question
                {
                    id = 5,
-                   name = "Назовите великую технику, которую смог реализовать \nМадара с помощью Обито",
+                   name = "Назовите великую технику,\nкоторую смог реализовать \nМадара с помощью Обито",
                    Type_questionid = 2,
                    Testid = 3,
                },
@@ -159,7 +159,7 @@ namespace Rabota
                new Question
                {
                    id = 12,
-                   name = "Сколько игровых архонтов существует на данный момент?",
+                   name = "Сколько игровых архонтов существует\nна данный момент?",
                    Type_questionid = 1,
                    Testid = 4,
                },
@@ -194,7 +194,7 @@ namespace Rabota
                new Question
                {
                    id = 17,
-                   name = "Как меня зовут?",
+                   name = "В какой стране \"родился\" Геншин?",
                    Type_questionid = 3,
                    Testid = 4,
                },
@@ -245,7 +245,7 @@ namespace Rabota
                new Question
                {
                    id = 24,
-                   name = "Самое маленькое число, в записи которого цифры различны?",
+                   name = "Самое маленькое число, в записи которого \nвсе цифры различны?",
                    Type_questionid = 3,
                    Testid = 1,
                },
@@ -273,7 +273,7 @@ namespace Rabota
                new Question
                {
                    id = 28,
-                   name = "На экзамене было 120 вопросов, Катя не выучила 6 из них.\nНайдите вероятность того, что ей попадется выученный вопрос",
+                   name = "На экзамене было 120 вопросов, Катя\nне выучила 6 из них.\nНайдите вероятность того, что ей\nпопадётся выученный вопрос",
                    Type_questionid = 1,
                    Testid = 1,
                },
@@ -723,23 +723,23 @@ namespace Rabota
                new Answer
                {
                    id = 49,
-                   name = "Настя",
+                   name = "Китай",
                    Questionid = 17,
                    vernost = 1,
                },
                new Answer
                {
                    id = 50,
-                   name = "Syntonyme",
+                   name = "Япония",
                    Questionid = 17,
-                   vernost = 1,
+                   vernost = 0,
                },
                new Answer
                {
                    id = 51,
-                   name = "Анастасия Веретенникова",
+                   name = "Корея",
                    Questionid = 17,
-                   vernost = 1,
+                   vernost = 0,
                },
                //18
                new Answer
