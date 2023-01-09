@@ -39,7 +39,9 @@ namespace Rabota
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // matem
@@ -47,7 +49,7 @@ namespace Rabota
             this.matem.BackColor = System.Drawing.Color.Lime;
             this.matem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matem.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matem.Location = new System.Drawing.Point(125, 200);
+            this.matem.Location = new System.Drawing.Point(125, 225);
             this.matem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.matem.Name = "matem";
             this.matem.Size = new System.Drawing.Size(269, 87);
@@ -61,7 +63,7 @@ namespace Rabota
             this.rus_z.BackColor = System.Drawing.Color.Lime;
             this.rus_z.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rus_z.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rus_z.Location = new System.Drawing.Point(125, 322);
+            this.rus_z.Location = new System.Drawing.Point(125, 354);
             this.rus_z.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rus_z.Name = "rus_z";
             this.rus_z.Size = new System.Drawing.Size(269, 87);
@@ -75,7 +77,7 @@ namespace Rabota
             this.naruto.BackColor = System.Drawing.Color.Lime;
             this.naruto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.naruto.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.naruto.Location = new System.Drawing.Point(125, 446);
+            this.naruto.Location = new System.Drawing.Point(125, 482);
             this.naruto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.naruto.Name = "naruto";
             this.naruto.Size = new System.Drawing.Size(269, 87);
@@ -89,7 +91,7 @@ namespace Rabota
             this.genshin.BackColor = System.Drawing.Color.Lime;
             this.genshin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.genshin.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genshin.Location = new System.Drawing.Point(125, 573);
+            this.genshin.Location = new System.Drawing.Point(125, 610);
             this.genshin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.genshin.Name = "genshin";
             this.genshin.Size = new System.Drawing.Size(269, 87);
@@ -102,18 +104,18 @@ namespace Rabota
             // 
             this.fio.AutoSize = true;
             this.fio.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fio.Location = new System.Drawing.Point(666, 88);
+            this.fio.Location = new System.Drawing.Point(714, 50);
             this.fio.Name = "fio";
-            this.fio.Size = new System.Drawing.Size(89, 44);
+            this.fio.Size = new System.Drawing.Size(85, 42);
             this.fio.TabIndex = 4;
             this.fio.Text = "Имя";
             // 
             // exit
             // 
-            this.exit.BackColor = System.Drawing.Color.LimeGreen;
+            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(759, 565);
+            this.exit.Location = new System.Drawing.Point(799, 566);
             this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(269, 95);
@@ -127,7 +129,7 @@ namespace Rabota
             this.procent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.procent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.procent.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.procent.Location = new System.Drawing.Point(759, 371);
+            this.procent.Location = new System.Drawing.Point(799, 415);
             this.procent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.procent.Name = "procent";
             this.procent.Size = new System.Drawing.Size(269, 87);
@@ -140,7 +142,7 @@ namespace Rabota
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 107);
+            this.label1.Location = new System.Drawing.Point(150, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 36);
             this.label1.TabIndex = 8;
@@ -149,22 +151,32 @@ namespace Rabota
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(802, 286);
+            this.label2.Location = new System.Drawing.Point(849, 321);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 36);
+            this.label2.Size = new System.Drawing.Size(179, 36);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Настройки";
+            this.label2.Text = "Настройки ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Rabota.Properties.Resources.anime_anime_boys_Anime_screenshot_JoJo_s_Bizarre_Adventure_Stardust_Crusaders_Noriaki_Kakyoin_redhead_artwork_digital_art_2086071;
-            this.pictureBox1.Location = new System.Drawing.Point(941, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(1019, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Rabota.Properties.Resources.Белый;
+            this.pictureBox2.Location = new System.Drawing.Point(721, 261);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(420, 436);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // Students_acc
             // 
@@ -182,12 +194,14 @@ namespace Rabota
             this.Controls.Add(this.naruto);
             this.Controls.Add(this.rus_z);
             this.Controls.Add(this.matem);
+            this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Students_acc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ваш аккаунт";
             this.Load += new System.EventHandler(this.Students_acc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +219,6 @@ namespace Rabota
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

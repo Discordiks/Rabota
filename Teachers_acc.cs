@@ -53,15 +53,21 @@ namespace Rabota
         {
             Application.Run(new Log_in());
         }
-
+        private void open_Itogi(object obj)
+        {
+            Application.Run(new Itogi());
+        }
         private void matem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            th = new Thread(open_Itogi);
+            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+            th.Start();
         }
 
         private void Teachers_acc_Load(object sender, EventArgs e)
         {
-            fio.Text = "Добро\nпожаловать," + User_info.user_ima;
+            fio.Text = "Добро\nпожаловать,\n" + User_info.user_ima;
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Rabota
     public partial class Students_acc : Form
     {
         ApplicationContext db = new ApplicationContext();
-        //Test_window f4;
         Thread th;
         public Students_acc()
         {
@@ -32,31 +31,39 @@ namespace Rabota
         }
         private void matem_Click(object sender, EventArgs e)
         {
-           
-            List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
-            Random ran = new Random();
-            questions = questions.OrderBy(_ => ran.Next()).ToList();
-            Start_test start_Test = new Start_test(){ UserId =  User_info.user_id, resultat = 0}; // создание
-            db.Start_Tests.Add(start_Test);
-            questions.RemoveAt(1);
-            questions.RemoveAt(2);
-            for (int i = 0; i < questions.Count; i++)
-            {
-                Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
-                db.Start_Tests_q.Add(start_Test_Q);
+            try
+            {  
+                List<Question> questions = db.Questions.Where(q => q.Testid == 1).ToList();
+                Random ran = new Random();
+                questions = questions.OrderBy(_ => ran.Next()).ToList();
+                Start_test start_Test = new Start_test() { UserId = User_info.user_id, resultat = 0 }; // создание
+                db.Start_Tests.Add(start_Test);
+                questions.RemoveAt(1);
+                questions.RemoveAt(2);
+                for (int i = 0; i < questions.Count; i++)
+                {
+                    Start_test_q start_Test_Q = new Start_test_q() { start_Test = start_Test, user_answer = 0, question = questions[i] };
+                    db.Start_Tests_q.Add(start_Test_Q);
+                }
+                db.SaveChanges();
+                User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
+                MessageBox.Show("Открытие теста по математике");
+                this.Close();
+                th = new Thread(open);
+                th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                th.Start();
             }
-            db.SaveChanges();
-            User_info.active_test_id = start_Test.id; //знание айди теста, который проходит пользователь
-            MessageBox.Show("Открытие теста по математике");
-            this.Close();
-            th = new Thread(open);
-            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
-            th.Start();
+            catch
+            {
+                MessageBox.Show("Загрузка теста");
+            }
         }
         
 
         private void rus_z_Click(object sender, EventArgs e)
         {
+            try 
+            {
             List<Question> questions = db.Questions.Where(q => q.Testid == 2).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
@@ -76,10 +83,17 @@ namespace Rabota
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
             th.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Загрузка теста");
+            }
         }
 
         private void liter_Click(object sender, EventArgs e)
         {
+            try
+            { 
             List<Question> questions = db.Questions.Where(q => q.Testid == 3).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
@@ -99,10 +113,17 @@ namespace Rabota
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
             th.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Загрузка теста");
+            }
         }
 
         private void genshin_Click(object sender, EventArgs e)
         {
+            try
+            { 
             List<Question> questions = db.Questions.Where(q => q.Testid == 4).ToList();
             Random ran = new Random();
             questions = questions.OrderBy(_ => ran.Next()).ToList();
@@ -122,6 +143,11 @@ namespace Rabota
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
             th.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Загрузка теста");
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -152,7 +178,7 @@ namespace Rabota
             b = CheckTest(2, start_Tests);
             c = CheckTest(3, start_Tests);
             d = CheckTest(4, start_Tests);
-            MessageBox.Show("Математика:"+ a +"\nРусский:" + b + "\nНаруто:" + c + "\nГеншин:" + d);
+            MessageBox.Show("Математика: "+ a + " баллов из 8" +"\nРусский: " + b + " баллов из 8" + "\nНаруто: " + c + " баллов из 8" + "\nГеншин: " + d + " баллов из 8");
         }
         private int CheckTest(int testId, List<Start_test> start_Tests)
         {

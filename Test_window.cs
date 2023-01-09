@@ -25,15 +25,23 @@ namespace Rabota
         public List<Start_test_q> Start_test_qs { get; set; } = new List<Start_test_q>();
         public Test_window()
         {
-            InitializeComponent();
-
-            Start_test start_Test = db.Start_Tests.Include(q => q.Start_test_qs).ThenInclude(r => r.question).Where(p => p.id == User_info.active_test_id).FirstOrDefault();
-            //Start_test_q start_Test_q = db.Start_Tests_q.Include(q => q.question ).Where(p => p.id == 2).FirstOrDefault();
-            if (start_Test.Start_test_qs[0] == null)
+            
+            try
             {
-                MessageBox.Show("Данные введены ошибочно");
+                InitializeComponent();
+                Start_test start_Test = db.Start_Tests.Include(q => q.Start_test_qs).ThenInclude(r => r.question).Where(p => p.id == User_info.active_test_id).FirstOrDefault();
+                //Start_test_q start_Test_q = db.Start_Tests_q.Include(q => q.question ).Where(p => p.id == 2).FirstOrDefault();
+                if (start_Test.Start_test_qs[0] == null)
+                {
+                    MessageBox.Show("Данные введены ошибочно");
+                }
+                Start_test_qs = start_Test.Start_test_qs; //сохрание списка вопросов
             }
-            Start_test_qs = start_Test.Start_test_qs; //сохрание списка вопросов
+            catch
+            {
+                MessageBox.Show("Тест загружается");
+            }
+
         }
         private void Table_refresh(int a = 0)
         {
@@ -71,7 +79,6 @@ namespace Rabota
         }
         private void CheckAnswer(string text)
         {
-            
             Start_test_q start_Test_Q1 = db.Start_Tests_q.FirstOrDefault(g => g.id == Start_test_qs[tekuhiy_q].question.id);
             Answer[] answer1 = db.Answers.Where(p => p.Questionid == start_Test_Q1.id).ToArray();
             int c = 0;
@@ -94,7 +101,7 @@ namespace Rabota
         {
             Table_refresh();
         }
-
+        
         private void zakonchit_Click(object sender, EventArgs e)
         {
             foreach (Start_test_q item in Start_test_qs) //перебирает
@@ -106,7 +113,6 @@ namespace Rabota
                     continue;
                 }
                 Answer answer_ = db.Answers.Where(p => p.id == item.user_answer).FirstOrDefault();
-                
                 if (answer_.vernost == 1)
                 {
                     rez++;
@@ -115,13 +121,18 @@ namespace Rabota
             Start_test start_Test = db.Start_Tests.FirstOrDefault(p => p.id == User_info.active_test_id);
             start_Test.resultat = rez;
             db.SaveChanges();
-            MessageBox.Show("Количество правильных ответов" + rez);
 
-            MessageBox.Show("Вернуться к тестам");
-            this.Close();
-            th = new Thread(open);
-            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
-            th.Start();
+            DialogResult resulttt = MessageBox.Show("Уверены, что хотите закончить тест?", "Выход", MessageBoxButtons.YesNo);
+            if (resulttt == DialogResult.Yes)
+            {
+                MessageBox.Show("Количество правильных ответов: " + rez + " из 8-ми", "Итоги теста");
+                MessageBox.Show("Возвращаемся к тестам");
+                this.Close();
+                th = new Thread(open);
+                th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+                th.Start();
+                this.TopMost = true; //открытие формы "самой верхней формой"
+            }
         }
         private void open(object obj)
         {
@@ -166,7 +177,6 @@ namespace Rabota
         private void vopros8_Click(object sender, EventArgs e)
         {
             Table_refresh(7);
-            sledvopros.Text = "Перейти к началу теста";
         }
 
         private void sledvopros_Click(object sender, EventArgs e)
@@ -176,10 +186,13 @@ namespace Rabota
             if (b == 8)
             {
                 b = 0;
-                
             }
             Table_refresh(b);
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

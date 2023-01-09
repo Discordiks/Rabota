@@ -39,7 +39,8 @@ namespace Rabota
             dataGridView1.DataSource = db.Questions.Local.ToBindingList();
             dataGridView2.DataSource = db.Answers.Local.ToBindingList();
 
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Purple;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LimeGreen;
+            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.LimeGreen;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -61,7 +62,7 @@ namespace Rabota
         {
             if (tabControl1.SelectedTab == tabPage1)
             {
-                // Удаление из таблицы "Школьники"
+                // Удаление из таблицы "Вопросы"
                 int s = Convert.ToInt32(kod1.Text);
                 Question question = db.Questions.FirstOrDefault(q => q.id == s);
                 if (question != null)
@@ -92,25 +93,39 @@ namespace Rabota
         }
         private void create_Click(object sender, EventArgs e)
         {
-            // Добавление в "Школьники"
+            // Добавление в "Вопросы"
             if (tabControl1.SelectedTab == tabPage1)
             {
-                Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()) )};
+                if (nameq.Text != "" )
+                {
+                    Question tom = new Question { name = nameq.Text, Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString()), Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()) )};
 
                 db.Questions.Add(tom);
                 db.SaveChanges();
                 MessageBox.Show("Данные добавлены успешно");
                 ClearData1();
+                }
+                else
+                {
+                    MessageBox.Show("Пожалуйста, выберите запись для обновления");
+                }
             }
             else if (tabControl1.SelectedTab == tabPage2)
             {
                 // Добавление в "Ответы"
-                Answer tom = new Answer { name = namean.Text,  Questionid = Convert.ToInt32(comboquestan.SelectedValue.ToString()) };
+                if (nameq.Text != "" )
+                {
+                    Answer tom = new Answer { name = namean.Text,  Questionid = Convert.ToInt32(comboquestan.SelectedValue.ToString()) };
 
                 db.Answers.Add(tom);
                 db.SaveChanges();
                 MessageBox.Show("Данные добавлены успешно");
                 ClearData2();
+                }
+                else
+                {
+                    MessageBox.Show("Пожалуйста, выберите запись для обновления");
+                }
             }
         }
         private void ClearData1()
@@ -142,52 +157,60 @@ namespace Rabota
         }
         private void change_Click(object sender, EventArgs e)
         {
-            //Изменение в "Школьники"
-            if(tabControl1.SelectedTab == tabPage1)
-            {
-                if (nameq.Text != "")
-                {
-
-                    Question question = db.Questions.FirstOrDefault(q => q.id == ID1);
-                    question.name = nameq.Text;
-                    question.Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
-                    question.Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()));
-
-                    db.SaveChanges();
-                    dataGridView1.Refresh();
-                    MessageBox.Show("Данные обновлены успешно");
-                    ClearData1();
-
-                }
-                else
-                {
-                    MessageBox.Show("Пожалуйста, выберите запись для обновления");
-                }
-
-            }
-            //Изменение в "Ответы"
-            else if (tabControl1.SelectedTab == tabPage2)
+            //Изменение в "Вопросы"
+            try
             {
 
-                if (namean.Text != "")
+
+                if (tabControl1.SelectedTab == tabPage1)
                 {
+                    if (nameq.Text != "")
+                    {
+                        dataGridView1.Refresh();
+                        Question question = db.Questions.FirstOrDefault(q => q.id == ID1);
+                        question.name = nameq.Text;
+                        question.Type_questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
+                        question.Test = db.Tests.Find(Convert.ToInt32(combotestq.SelectedValue.ToString()));
 
-                    Answer answer = db.Answers.FirstOrDefault(an => an.id == ID2);
-                    answer.name = namean.Text;
-                    answer.Questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
+                        db.SaveChanges();
+                        dataGridView1.Refresh();
+                        MessageBox.Show("Данные обновлены успешно");
+                        ClearData1();
 
-                    db.SaveChanges();
-                    dataGridView2.Refresh();
-                    MessageBox.Show("Данные обновлены успешно");
-                    ClearData2();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пожалуйста, выберите запись для обновления");
+                    }
 
                 }
-                else
+                //Изменение в "Ответы"
+                else if (tabControl1.SelectedTab == tabPage2)
                 {
-                    MessageBox.Show("Пожалуйста, выберите запись для обновления");
+
+                    if (namean.Text != "")
+                    {
+                        dataGridView2.Refresh();
+                        Answer answer = db.Answers.FirstOrDefault(an => an.id == ID2);
+                        answer.name = namean.Text;
+                        answer.Questionid = Convert.ToInt32(combotypeq.SelectedValue.ToString());
+
+                        db.SaveChanges();
+                        dataGridView2.Refresh();
+                        MessageBox.Show("Данные обновлены успешно");
+                        ClearData2();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пожалуйста, выберите запись для обновления");
+                    }
                 }
             }
-
+            catch
+            {
+                MessageBox.Show("Пожалуйста, выберите запись для обновления");
+            }
 
         }
 
@@ -207,6 +230,11 @@ namespace Rabota
         private void open(object obj)
         {
             Application.Run(new Teachers_acc());
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

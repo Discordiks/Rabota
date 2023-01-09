@@ -180,6 +180,12 @@
     <Compile Include="Entity\Test.cs" />
     <Compile Include="Entity\Type_question.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Itogi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Itogi.Designer.cs">
+      <DependentUpon>Itogi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teachers_acc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Itogi.resx">
+      <DependentUpon>Itogi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teachers_acc.resx">
       <DependentUpon>Teachers_acc.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +259,9 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Rabota.Entity.Answer.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.Question.datasource" />
+    <None Include="Properties\DataSources\Rabota.Entity.Start_test1.datasource" />
+    <None Include="Properties\DataSources\Rabota.Entity.Start_test_q1.datasource" />
+    <None Include="Properties\DataSources\Rabota.Entity.Test1.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.Type_question.datasource" />
     <None Include="Properties\DataSources\Rabota.Entity.User.datasource" />
     <None Include="Properties\Settings.settings">
@@ -273,6 +285,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Белый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Зелёный.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />

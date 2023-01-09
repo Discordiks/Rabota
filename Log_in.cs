@@ -36,7 +36,7 @@ namespace Rabota
             {
                 User_info.user_id = user.id;
                 User_info.user_ima = user.ima;
-                if (outemail.Text ==  "Admin")
+                if (outemail.Text == "Admin" || outemail.Text == "Ad" || outemail.Text == "Syntonyme" || outemail.Text == "1")
                 {
                     MessageBox.Show("Всё верно, вы учитель, проходите");
                     this.Close();

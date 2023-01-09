@@ -54,7 +54,7 @@ namespace Rabota
             }
             catch
             {
-                MessageBox.Show("Введите дату");
+                MessageBox.Show("Введите дату в нужном формате:\nчисло/месяц/год");
             }
             
         }

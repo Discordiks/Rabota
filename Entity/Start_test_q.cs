@@ -17,5 +17,6 @@ namespace Rabota.Entity
 
         public Question question { get; set; }
 
+
     }
 }
