@@ -92,7 +92,7 @@ namespace Rabota
                     break;
                 }
             }
-            MessageBox.Show($"{answerId} : {text} : {answer1[c].name}");
+            MessageBox.Show($"{answerId} : {text} : {answer1[c].name}"); //проверка на правильное сравнение ответов
             Start_test_qs[tekuhiy_q].user_answer = answerId;
             start_Test_Q1.user_answer = answerId;
             db.SaveChanges();

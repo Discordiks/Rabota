@@ -70,6 +70,7 @@ namespace Rabota
             this.rus_z.TabIndex = 1;
             this.rus_z.Text = "Русский язык";
             this.rus_z.UseVisualStyleBackColor = false;
+            this.rus_z.Click += new System.EventHandler(this.rus_z_Click);
             // 
             // naruto
             // 
@@ -83,6 +84,7 @@ namespace Rabota
             this.naruto.TabIndex = 2;
             this.naruto.Text = "Наруто";
             this.naruto.UseVisualStyleBackColor = false;
+            this.naruto.Click += new System.EventHandler(this.naruto_Click);
             // 
             // genshin
             // 
@@ -96,6 +98,7 @@ namespace Rabota
             this.genshin.TabIndex = 3;
             this.genshin.Text = "Геншин";
             this.genshin.UseVisualStyleBackColor = false;
+            this.genshin.Click += new System.EventHandler(this.genshin_Click);
             // 
             // fio
             // 

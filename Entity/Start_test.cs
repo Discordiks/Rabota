@@ -15,8 +15,31 @@ namespace Rabota.Entity
         public int resultat { get; set; }
 
         public User user { get; set; }
-        
+        public virtual string usersss
+        {
+            get
+            {
+                return user.ima + "  ";
+            }
 
+        }
+        public virtual string usersss1
+        {
+            get
+            {
+                return user.fam + "  ";
+            }
+
+        }
+        public virtual string usersss2
+        {
+            get
+            {
+                return user.otch + "  ";
+            }
+
+        }
+       
         public List<Start_test_q> Start_test_qs { get; set; } = new List<Start_test_q>();
 
 

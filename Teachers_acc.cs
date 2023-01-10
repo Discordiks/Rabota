@@ -22,7 +22,7 @@ namespace Rabota
             InitializeComponent();
         }
 
-        private void voprosiks_Click(object sender, EventArgs e) 
+        private void voprosiks_Click(object sender, EventArgs e)
         {
             th = new Thread(open);
             th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
@@ -32,9 +32,8 @@ namespace Rabota
         {
             Application.Run(new Vopros());
         }
-        
 
-            private void exit_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
             DialogResult resulttt = MessageBox.Show("Уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo);
             if (resulttt == DialogResult.Yes)
@@ -46,7 +45,7 @@ namespace Rabota
                 th.Start();
 
             }
-
+        
             this.TopMost = true; //открытие формы "самой верхней формой"
         }
         private void open_Log_in(object obj)
@@ -57,6 +56,11 @@ namespace Rabota
         {
             Application.Run(new Itogi());
         }
+
+        private void Teachers_acc_Load(object sender, EventArgs e)
+        {
+            fio.Text = "Добро\nпожаловать,\n" + User_info.user_ima;
+        }
         private void matem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,9 +69,28 @@ namespace Rabota
             th.Start();
         }
 
-        private void Teachers_acc_Load(object sender, EventArgs e)
+        private void rus_z_Click(object sender, EventArgs e)
         {
-            fio.Text = "Добро\nпожаловать,\n" + User_info.user_ima;
+            this.Close();
+            th = new Thread(open_Itogi);
+            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+            th.Start();
+        }
+
+        private void naruto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(open_Itogi);
+            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+            th.Start();
+        }
+
+        private void genshin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(open_Itogi);
+            th.SetApartmentState(ApartmentState.STA); //модель для запуска потока
+            th.Start();
         }
     }
 }

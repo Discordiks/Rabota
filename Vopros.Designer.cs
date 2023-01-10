@@ -31,12 +31,19 @@ namespace Rabota
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type_Question_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Test_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.answerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delete = new System.Windows.Forms.Button();
             this.create = new System.Windows.Forms.Button();
             this.change = new System.Windows.Forms.Button();
@@ -52,21 +59,14 @@ namespace Rabota
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.questionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.questionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.answerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.questionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typequestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.answerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typequestionBindingSource)).BeginInit();
@@ -96,12 +96,27 @@ namespace Rabota
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Номер";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
             // Type_Question_name
             // 
             this.Type_Question_name.DataPropertyName = "Type_Question_name";
             this.Type_Question_name.HeaderText = "Тип вопроса";
             this.Type_Question_name.MinimumWidth = 6;
             this.Type_Question_name.Name = "Type_Question_name";
+            this.Type_Question_name.ReadOnly = true;
             // 
             // Test_result
             // 
@@ -109,6 +124,11 @@ namespace Rabota
             this.Test_result.HeaderText = "Тест";
             this.Test_result.MinimumWidth = 6;
             this.Test_result.Name = "Test_result";
+            this.Test_result.ReadOnly = true;
+            // 
+            // questionBindingSource1
+            // 
+            this.questionBindingSource1.DataSource = typeof(Rabota.Entity.Question);
             // 
             // tabControl1
             // 
@@ -166,6 +186,32 @@ namespace Rabota
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(1407, 400);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Номер";
+            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Ответ";
+            this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // questionnameDataGridViewTextBoxColumn
+            // 
+            this.questionnameDataGridViewTextBoxColumn.DataPropertyName = "Question_name";
+            this.questionnameDataGridViewTextBoxColumn.HeaderText = "Наименование вопроса";
+            this.questionnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.questionnameDataGridViewTextBoxColumn.Name = "questionnameDataGridViewTextBoxColumn";
+            this.questionnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // answerBindingSource
+            // 
+            this.answerBindingSource.DataSource = typeof(Rabota.Entity.Answer);
             // 
             // delete
             // 
@@ -335,50 +381,6 @@ namespace Rabota
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Номер";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // questionBindingSource1
-            // 
-            this.questionBindingSource1.DataSource = typeof(Rabota.Entity.Question);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Номер";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Ответ";
-            this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // questionnameDataGridViewTextBoxColumn
-            // 
-            this.questionnameDataGridViewTextBoxColumn.DataPropertyName = "Question_name";
-            this.questionnameDataGridViewTextBoxColumn.HeaderText = "Наименование вопроса";
-            this.questionnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.questionnameDataGridViewTextBoxColumn.Name = "questionnameDataGridViewTextBoxColumn";
-            this.questionnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // answerBindingSource
-            // 
-            this.answerBindingSource.DataSource = typeof(Rabota.Entity.Answer);
-            // 
             // questionBindingSource
             // 
             this.questionBindingSource.DataSource = typeof(Rabota.Entity.Question);
@@ -409,14 +411,15 @@ namespace Rabota
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Vopros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вопросы и ответы";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.answerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.questionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typequestionBindingSource)).EndInit();
